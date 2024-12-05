@@ -65,3 +65,4 @@ Contributions to Litekite Frontend are welcome. Please follow these steps:
 ## Contact
 
 If you have any questions or feedback, please reach out to [your-email@example.com](https://x.com/AkshatGirdhar2).
+// Initial commit update for README.md
