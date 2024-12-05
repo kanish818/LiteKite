@@ -4,3 +4,4 @@ export default {
     autoprefixer: {},
   },
 }
+// Initial postcss configuration
