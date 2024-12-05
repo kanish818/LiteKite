@@ -67,4 +67,4 @@ export default {
   	}
   },
   plugins: [require("tailwindcss-animate")],
-}
+}// Added initial Tailwind CSS configuration
