@@ -10,3 +10,4 @@ export default defineConfig({
     },
   },
 })
+// Added Vite config for optimized build
