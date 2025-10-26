@@ -25,7 +25,7 @@ Follow these steps to set up the project locally:
 
 1. Clone the repository:
    ```
-   git clone https://github.com/akshatg5/StockVision.git
+   git clone https://github.com//LiteKite.git
    ```
 
 2. Install dependencies:
@@ -41,7 +41,7 @@ Follow these steps to set up the project locally:
    Replace the URL with your backend server URL if different.
 
 4. Set up and run the backend server:
-   - Clone the backend repository: https://github.com/akshatg5/Finance-CS50
+   - Clone the backend repository: https://github.com/kanish818/LiteKite-Backend
    - Follow the setup instructions in the backend README
    - Start the backend server
 
@@ -66,3 +66,4 @@ Contributions to Litekite Frontend are welcome. Please follow these steps:
 
 If you have any questions or feedback, please reach out to [your-email@example.com](https://x.com/AkshatGirdhar2).
 // Initial commit update for README.md
+
