@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteKite Interview Prep - PRACTICE QUESTIONS</title>
+    <style>
+        @media print {
+            body { margin: 0.5in; }
+            .no-print { display: none; }
+            pre { page-break-inside: avoid; }
+            h1, h2, h3 { page-break-after: avoid; }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #ecf0f1;
+            font-style: italic;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .checkbox-item {
+            margin: 8px 0;
+        }
+        
+        .checkbox {
+            margin-right: 8px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #2980b9;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+        
+        em {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    <p><h1>LiteKite Interview Practice Questions</h1></p><p><h2>🎯 How to Use This Document</h2></p><p><li><strong>Cover the answer</strong> section</li>
+<li><strong>Answer out loud</strong> (not in your head!)</li>
+<li><strong>Record yourself</strong> if possible - helps identify filler words</li>
+<li><strong>Time yourself</strong> - aim for 1-2 minutes per answer</li>
+<li><strong>Practice daily</strong> - even 15 minutes helps</li></p><p>---</p><p><h2>📝 Quick Fire Questions (30 seconds each)</h2></p><p><h3>Round 1: Project Basics</h3></p><p><strong>Q1:</strong> What does LiteKite do?
+&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p>"LiteKite is a stock portfolio management platform where users can trade US and Indian stocks with real-time prices, track their portfolio performance, and get AI-powered investment analysis using Google's Gemini API."
+&lt;/details&gt;</p><p><strong>Q2:</strong> What's your tech stack?
+&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p>"Frontend: React with TypeScript, Vite, Tailwind CSS, and Shadcn UI.
+Backend: Flask with PostgreSQL, SQLAlchemy ORM, JWT authentication.
+External: Google Gemini AI, yfinance for stock data, Google OAuth."
+&lt;/details&gt;</p><p><strong>Q3:</strong> How many users can your system handle?
+&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p>"Currently optimized for medium scale. With caching and database optimizations, it could handle thousands. For 100K+ users, I'd need Redis caching, read replicas, load balancing, and possibly microservices."
+&lt;/details&gt;</p><p><strong>Q4:</strong> What database do you use and why?
+&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p>"PostgreSQL because it's robust, ACID-compliant for financial transactions, has excellent SQLAlchemy support, handles complex queries well, and is open-source with strong community support."
+&lt;/details&gt;</p><p><strong>Q5:</strong> How do you authenticate users?
+&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p>"Two methods: traditional login with bcrypt-hashed passwords generating JWT tokens, and Google OAuth using Authlib. The JWT is stored in localStorage and sent via Authorization header on protected routes."
+&lt;/details&gt;</p><p>---</p><p><h2>🔍 Deep Dive Questions (2-3 minutes each)</h2></p><p><h3>Authentication &amp; Security</h3></p><p><strong>Q6:</strong> Explain your authentication flow from login button click to viewing portfolio.</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>Step-by-step flow:</strong></p><p><li>User enters credentials and clicks Login</li>
+<li>Frontend sends POST to <code>/api/login</code> with username and password</li>
+<li>Backend queries database for user with that username</li>
+<li>Uses <code>check_password_hash()</code> to verify password against stored hash</li>
+<li>If valid, Flask-JWT-Extended generates access token with <code>create_access_token(identity=user.id)</code></li>
+<li>Token returned to frontend in response: <code>{access_token: "eyJ..."}</code></li>
+<li>Frontend stores token in localStorage: <code>localStorage.setItem('token', token)</code></li>
+<li>AuthContext updates <code>isAuthenticated</code> to true</li>
+<li>User redirected to portfolio page (protected route)</li>
+<li>Portfolio component calls <code>/api/portfolio</code> with Authorization header: <code>Bearer &lt;token&gt;</code></li>
+<li>Backend <code>@jwt_required()</code> decorator validates token</li>
+<li>Returns portfolio data if valid</li></p><p><strong>Security considerations:</strong>
+<ul><li>Password never sent in plain text (HTTPS)</li>
+<li>Hash stored in database, not password</li>
+<li>JWT includes expiration</li>
+<li>Token signature prevents tampering</li>
+</ul>&lt;/details&gt;</p><p><strong>Q7:</strong> What security vulnerabilities exist in your app and how do you prevent them?</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>1. SQL Injection:</strong>
+<ul><li><strong>Risk:</strong> Malicious SQL in user inputs</li>
+<li><strong>Prevention:</strong> SQLAlchemy ORM with parameterized queries. Never string concatenation.</li>
+</ul>
+<strong>2. XSS (Cross-Site Scripting):</strong>
+<ul><li><strong>Risk:</strong> Injecting JavaScript into pages</li>
+<li><strong>Prevention:</strong> React auto-escapes JSX content. Sanitize any dangerouslySetInnerHTML.</li>
+</ul>
+<strong>3. CSRF (Cross-Site Request Forgery):</strong>
+<ul><li><strong>Risk:</strong> Unauthorized actions from malicious sites</li>
+<li><strong>Prevention:</strong> JWT (stateless), SameSite cookies, CORS configuration</li>
+</ul>
+<strong>4. Password Attacks:</strong>
+<ul><li><strong>Risk:</strong> Brute force, dictionary attacks</li>
+<li><strong>Prevention:</strong> Bcrypt hashing with salt (computationally expensive), rate limiting on login</li>
+</ul>
+<strong>5. JWT Vulnerabilities:</strong>
+<ul><li><strong>Risk:</strong> Token theft, replay attacks</li>
+<li><strong>Prevention:</strong> Short expiration, HTTPS only, HttpOnly cookies for refresh tokens, secret key rotation</li>
+</ul>
+<strong>6. Injection Attacks in Stock Symbols:</strong>
+<ul><li><strong>Risk:</strong> Malicious ticker symbols</li>
+<li><strong>Prevention:</strong> Input validation, regex patterns for valid symbols</li>
+</ul>
+<strong>Would add:</strong>
+<ul><li>Rate limiting (Flask-Limiter)</li>
+<li>CAPTCHA on registration</li>
+<li>2FA for high-value accounts</li>
+<li>Security headers (CSP, X-XSS-Protection)</li>
+</ul>&lt;/details&gt;</p><p>---</p><p><h3>Backend Architecture</h3></p><p><strong>Q8:</strong> Walk me through what happens when a user buys a stock.</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>Frontend (BuyDialog.tsx):</strong>
+<li>User enters symbol (e.g., "AAPL") and shares (10)</li>
+<li>First API call: GET <code>/api/quote/AAPL</code> to fetch current price</li>
+<li>Display: "10 shares × $175.50 = $1,755.00"</li>
+<li>User clicks "Buy"</li>
+<li>POST <code>/api/buy</code> with <code>{symbol: "AAPL", shares: 10}</code> and JWT token</li></p><p><strong>Backend (api/index.py):</strong>
+<pre><code>@app.route('/api/buy', methods=['POST'])
+@jwt_required()
+def buy():
+    user_id = get_jwt_identity()
+    user = User.query.get(user_id)
+    
+    # Parse request
+    symbol = request.json.get('symbol')
+    shares = int(request.json.get('shares'))
+    
+    # Get current price
+    quote = lookup(symbol)  # Uses yfinance
+    if not quote:
+        return error("Invalid symbol")
+    
+    price = quote['price']
+    total_cost = shares * price
+    
+    # Validate funds
+    if user.cash &lt; total_cost:
+        return error("Insufficient funds")
+    
+    # Database transaction
+    try:
+        user.cash -= total_cost
+        txn = Transaction(
+            user_id=user_id,
+            ticker=symbol,
+            shares=shares,
+            price=price,
+            type='buy'
+        )
+        db.session.add(txn)
+        db.session.commit()
+    except:
+        db.session.rollback()
+        return error("Transaction failed")
+    
+    return {
+        "message": f"Bought {shares} shares of {symbol}",
+        "remaining_cash": user.cash
+    }</code></pre></p><p><strong>Database Changes:</strong>
+<ul><li>User table: <code>cash</code> decreased by $1,755</li>
+<li>Transaction table: New row inserted</li>
+</ul>
+<strong>Frontend Response:</strong>
+<ul><li>Show success toast</li>
+<li>Update cash display</li>
+<li>Optionally refresh portfolio</li>
+</ul>&lt;/details&gt;</p><p><strong>Q9:</strong> How do you calculate the user's portfolio?</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>Approach:</strong></p><p><li><strong>Fetch all transactions</strong> for the user from database</li>
+<li><strong>Aggregate by ticker</strong> to calculate net shares:</li>
+   - For each stock, sum all "buy" transactions
+   - Subtract all "sell" transactions
+   - If net shares &gt; 0, user owns it</p><p><pre><code>@app.route('/api/portfolio')
+@jwt_required()
+def portfolio():
+    user_id = get_jwt_identity()
+    
+    # Get all transactions
+    transactions = Transaction.query.filter_by(user_id=user_id).all()
+    
+    # Aggregate holdings
+    holdings = {}
+    for txn in transactions:
+        if txn.ticker not in holdings:
+            holdings[txn.ticker] = {
+                'shares': 0,
+                'name': txn.name,
+                'total_invested': 0
+            }
+        
+        if txn.type == 'buy':
+            holdings[txn.ticker]['shares'] += txn.shares
+            holdings[txn.ticker]['total_invested'] += txn.shares * txn.price
+        else:  # sell
+            holdings[txn.ticker]['shares'] -= txn.shares
+            holdings[txn.ticker]['total_invested'] -= txn.shares * txn.price
+    
+    # Remove stocks with 0 shares
+    holdings = {k: v for k, v in holdings.items() if v['shares'] &gt; 0}
+    
+    # Fetch current prices
+    portfolio = []
+    for ticker, data in holdings.items():
+        quote = lookup(ticker)
+        current_value = data['shares'] * quote['price']
+        profit_loss = current_value - data['total_invested']
+        
+        portfolio.append({
+            'ticker': ticker,
+            'name': data['name'],
+            'shares': data['shares'],
+            'current_price': quote['price'],
+            'current_value': current_value,
+            'profit_loss': profit_loss,
+            'profit_loss_percent': (profit_loss / data['total_invested']) * 100
+        })
+    
+    return jsonify(portfolio)</code></pre></p><p><strong>Optimization for scale:</strong>
+<ul><li>Use SQL aggregation instead of Python loops:</li>
+</ul><pre><code>SELECT 
+    ticker,
+    SUM(CASE WHEN type='buy' THEN shares ELSE -shares END) as net_shares,
+    SUM(CASE WHEN type='buy' THEN shares<em>price ELSE -shares</em>price END) as total_invested
+FROM transactions
+WHERE user_id = ?
+GROUP BY ticker
+HAVING net_shares &gt; 0</code></pre></p><p><ul><li>Cache current prices in Redis (TTL: 5 seconds)</li>
+<li>Materialized view for frequently accessed portfolios</li>
+</ul>&lt;/details&gt;</p><p><strong>Q10:</strong> Explain database migrations and how you use them.</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>What are migrations?</strong>
+Version control for database schema. Instead of manually running SQL, migrations track changes incrementally.</p><p><strong>Setup in my project:</strong>
+<pre><code># Initialize (done once)
+flask db init  # Creates migrations/ folder</p><p><h1>Create migration after model changes</h1>
+flask db migrate -m "Added indiancash column to User"</p><p><h1>Apply migration</h1>
+flask db upgrade</p><p><h1>Rollback if needed</h1>
+flask db downgrade</code></pre></p><p><strong>Example migration file:</strong>
+<pre><code># migrations/versions/xxxxx_.py
+def upgrade():
+    op.add_column('user', 
+        sa.Column('indiancash', sa.Float(), nullable=False, server_default='10000.0'))</p><p>def downgrade():
+    op.drop_column('user', 'indiancash')</code></pre></p><p><strong>Workflow:</strong>
+<li>Modify model in <code>models.py</code></li>
+<li>Generate migration: <code>flask db migrate</code></li>
+<li>Review auto-generated SQL (important!)</li>
+<li>Test in development</li>
+<li>Commit migration file to Git</li>
+<li>Apply in production with backup first</li></p><p><strong>Why important?</strong>
+<ul><li>Keeps dev and prod schemas in sync</li>
+<li>Reversible changes</li>
+<li>Team collaboration</li>
+<li>Deployment automation</li>
+</ul>
+<strong>Best practices I follow:</strong>
+<ul><li>Never edit applied migrations</li>
+<li>Always review auto-generated code</li>
+<li>Backup before production migrations</li>
+<li>Small, atomic changes</li>
+<li>Descriptive messages</li>
+</ul>&lt;/details&gt;</p><p>---</p><p><h3>Frontend Architecture</h3></p><p><strong>Q11:</strong> How does your frontend state management work?</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>I use a hybrid approach:</strong></p><p><strong>1. Context API for Authentication (Global State):</strong>
+<pre><code>// AuthContext.tsx
+const AuthContext = createContext&lt;AuthContextType&gt;({
+    isAuthenticated: false,
+    login: () =&gt; {},
+    logout: () =&gt; {},
+    // ...
+});</p><p>// Provides to entire app
+&lt;AuthProvider&gt;
+    &lt;App /&gt;
+&lt;/AuthProvider&gt;</p><p>// Consumed in components
+const { isAuthenticated, logout } = useAuth();</code></pre></p><p><strong>Why Context for auth?</strong>
+<ul><li>Needed across many components</li>
+<li>Changes infrequently</li>
+<li>Avoids prop drilling</li>
+</ul>
+<strong>2. Local State with useState (Component State):</strong>
+<pre><code>// Portfolio.tsx
+const [portfolio, setPortfolio] = useState([]);
+const [loading, setLoading] = useState(true);</p><p>useEffect(() =&gt; {
+    fetchPortfolio();
+}, []);</code></pre></p><p><strong>Why local state?</strong>
+<ul><li>Data specific to one component</li>
+<li>Re-fetched on mount</li>
+<li>Don't need to share between routes</li>
+</ul>
+<strong>3. Form State:</strong>
+<pre><code>// BuyDialog.tsx
+const [symbol, setSymbol] = useState('');
+const [shares, setShares] = useState(1);</code></pre></p><p><strong>Didn't use Redux because:</strong>
+<ul><li>App complexity doesn't require it</li>
+<li>Most data is fetched fresh from API</li>
+<li>Context API sufficient for shared state</li>
+<li>Smaller bundle size</li>
+</ul>
+<strong>If scaling:</strong>
+<ul><li>React Query for server state caching</li>
+<li>Zustand for lightweight global state</li>
+<li>Redux for complex state logic</li>
+</ul>&lt;/details&gt;</p><p><strong>Q12:</strong> How do you handle API calls and errors on the frontend?</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>API Layer:</strong>
+<pre><code>// lib/url.ts
+const url = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000/api';</p><p>// Portfolio.tsx
+import axios from 'axios';
+import { useToast } from './hooks/use-toast';</p><p>const { toast } = useToast();</p><p>const fetchPortfolio = async () =&gt; {
+    try {
+        setLoading(true);
+        
+        const token = localStorage.getItem('token');
+        const response = await axios.get(<code>${url}/portfolio</code>, {
+            headers: {
+                'Authorization': <code>Bearer ${token}</code>
+            }
+        });
+        
+        setPortfolio(response.data);
+    } catch (error) {
+        if (error.response?.status === 401) {
+            // Token expired or invalid
+            logout();
+            navigate('/login');
+        } else {
+            toast({
+                title: "Error",
+                description: error.response?.data?.message || "Failed to fetch portfolio",
+                variant: "destructive"
+            });
+        }
+    } finally {
+        setLoading(false);
+    }
+};</code></pre></p><p><strong>Error Handling Strategy:</strong></p><p><li><strong>Network Errors:</strong> Show toast notification</li>
+<li><strong>401 Unauthorized:</strong> Redirect to login, clear token</li>
+<li><strong>400 Bad Request:</strong> Display validation errors</li>
+<li><strong>500 Server Error:</strong> "Something went wrong, try again"</li>
+<li><strong>Loading States:</strong> Spinners/skeletons while fetching</li></p><p><strong>Axios Interceptor (could add):</strong>
+<pre><code>axios.interceptors.request.use(config =&gt; {
+    const token = localStorage.getItem('token');
+    if (token) {
+        config.headers.Authorization = <code>Bearer ${token}</code>;
+    }
+    return config;
+});</p><p>axios.interceptors.response.use(
+    response =&gt; response,
+    error =&gt; {
+        if (error.response?.status === 401) {
+            // Global logout
+        }
+        return Promise.reject(error);
+    }
+);</code></pre></p><p><strong>User Experience:</strong>
+<ul><li>Optimistic updates for better UX</li>
+<li>Retry logic for transient failures</li>
+<li>Graceful degradation</li>
+</ul>&lt;/details&gt;</p><p>---</p><p><h3>System Design</h3></p><p><strong>Q13:</strong> How would you scale this to handle 100,000 concurrent users?</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>Current Bottlenecks:</strong>
+<li>Single Flask instance</li>
+<li>Stock price API calls on every request</li>
+<li>Database queries without caching</li>
+<li>No CDN for static assets</li></p><p><strong>Scaling Strategy:</strong></p><p><strong>1. Application Layer:</strong>
+<pre><code>Users → Load Balancer → Flask App Instances (5-10)
+                      ↓
+                   Redis Cache
+                      ↓
+              PostgreSQL (Primary)
+                      ↓
+             Read Replicas (2-3)</code></pre></p><p><strong>2. Caching Strategy:</strong>
+<ul><li><strong>Redis</strong> for:</li>
+</ul>  - Stock prices (TTL: 5 seconds)
+  - User sessions
+  - Portfolio calculations (invalidate on trade)
+  
+<pre><code>import redis
+r = redis.Redis()</p><p>def get_stock_price(symbol):
+    # Check cache first
+    cached = r.get(f'price:{symbol}')
+    if cached:
+        return json.loads(cached)
+    
+    # Fetch from API
+    price = yfinance.Ticker(symbol).info['currentPrice']
+    
+    # Cache for 5 seconds
+    r.setex(f'price:{symbol}', 5, json.dumps(price))
+    return price</code></pre></p><p><strong>3. Database Optimization:</strong>
+<ul><li>Connection pooling: pgBouncer (max 100 connections)</li>
+<li>Read replicas for SELECT queries</li>
+<li>Partition transactions table by date</li>
+<li>Materialized views for portfolios</li>
+<li>Indexes on user_id, ticker, created_at</li>
+</ul>
+<strong>4. Async Processing:</strong>
+<pre><code># Celery for background tasks
+@celery.task
+def analyze_portfolio(user_id):
+    # AI analysis takes time
+    # Process asynchronously
+    portfolio = get_portfolio(user_id)
+    analysis = gemini.analyze(portfolio)
+    cache.set(f'analysis:{user_id}', analysis, ttl=3600)</code></pre></p><p><strong>5. Frontend Optimization:</strong>
+<ul><li>CDN for static assets (CloudFlare)</li>
+<li>Code splitting: <code>React.lazy()</code></li>
+<li>Service worker for offline support</li>
+<li>Compress images and assets</li>
+<li>Virtualized lists for transaction history</li>
+</ul>
+<strong>6. Infrastructure:</strong>
+<pre><code># Docker Compose
+services:
+  nginx:  # Load balancer
+  flask-1: # App instance 1
+  flask-2: # App instance 2
+  redis:
+  postgres:
+  celery:</code></pre></p><p><strong>7. Monitoring:</strong>
+<ul><li>Prometheus + Grafana</li>
+<li>Log aggregation (ELK stack)</li>
+<li>APM (New Relic/DataDog)</li>
+<li>Alerts on error rates, latency</li>
+</ul>
+<strong>8. Rate Limiting:</strong>
+<pre><code>@limiter.limit("100/minute")
+@app.route('/api/quote')
+def get_quote():
+    ...</code></pre></p><p><strong>Cost Estimate:</strong>
+<ul><li>10 Flask instances: $500/mo</li>
+<li>PostgreSQL (managed): $200/mo</li>
+<li>Redis: $100/mo</li>
+<li>CDN: $50/mo</li>
+<li>Monitoring: $100/mo</li>
+</ul><strong>Total: ~$950/month for 100K users</strong>
+&lt;/details&gt;</p><p><strong>Q14:</strong> Design a notification system for price alerts.</p><p>&lt;details&gt;
+&lt;summary&gt;Detailed Answer&lt;/summary&gt;</p><p><strong>Requirements:</strong>
+<ul><li>User sets alert: "Notify me if AAPL drops below $170"</li>
+<li>Check prices periodically</li>
+<li>Send notification (email/push)</li>
+</ul>
+<strong>Database Schema:</strong>
+<pre><code>CREATE TABLE price_alerts (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    ticker VARCHAR(10),
+    condition VARCHAR(10),  -- 'above', 'below'
+    target_price DECIMAL(10,2),
+    active BOOLEAN DEFAULT TRUE,
+    created_at TIMESTAMP DEFAULT NOW()
+);</code></pre></p><p><strong>Architecture:</strong></p><p><strong>Option 1: Polling (Simple):</strong>
+<pre><code># Celery periodic task (runs every 5 minutes)
+@celery.task(bind=True)
+def check_price_alerts(self):
+    alerts = PriceAlert.query.filter_by(active=True).all()
+    
+    for alert in alerts:
+        current_price = get_stock_price(alert.ticker)
+        
+        triggered = False
+        if alert.condition == 'below' and current_price &lt; alert.target_price:
+            triggered = True
+        elif alert.condition == 'above' and current_price &gt; alert.target_price:
+            triggered = True
+        
+        if triggered:
+            send_notification(alert.user_id, alert)
+            alert.active = False  # One-time alert
+            db.session.commit()</code></pre></p><p><strong>Option 2: Streaming (Advanced):</strong>
+<pre><code># WebSocket connection to stock data provider
+import websocket</p><p>def on_price_update(ws, message):
+    data = json.loads(message)
+    ticker = data['symbol']
+    price = data['price']
+    
+    # Check if any alerts triggered
+    alerts = PriceAlert.query.filter_by(
+        ticker=ticker,
+        active=True
+    ).all()
+    
+    for alert in alerts:
+        if should_trigger(alert, price):
+            send_notification(alert.user_id, alert)</p><p>ws = websocket.WebSocketApp(
+    "wss://stream.polygon.io/stocks",
+    on_message=on_price_update
+)</code></pre></p><p><strong>Notification Delivery:</strong>
+<pre><code># Email via SendGrid
+from sendgrid import SendGridAPIClient</p><p>def send_notification(user_id, alert):
+    user = User.query.get(user_id)
+    
+    message = Mail(
+        from_email='alerts@litekite.com',
+        to_emails=user.email,
+        subject=f'Price Alert: {alert.ticker}',
+        html_content=f'''
+            &lt;p&gt;Your alert for {alert.ticker} was triggered!&lt;/p&gt;
+            &lt;p&gt;Current price: ${current_price}&lt;/p&gt;
+            &lt;p&gt;Target: {alert.condition} ${alert.target_price}&lt;/p&gt;
+        '''
+    )
+    
+    sg = SendGridAPIClient(os.getenv('SENDGRID_API_KEY'))
+    sg.send(message)</p><p><h1>Push notification via Firebase Cloud Messaging</h1>
+import firebase_admin</p><p>def send_push_notification(user_id, alert):
+    message = messaging.Message(
+        notification=messaging.Notification(
+            title=f'{alert.ticker} Price Alert',
+            body=f'Price is now ${current_price}'
+        ),
+        token=user.fcm_token
+    )
+    messaging.send(message)</code></pre></p><p><strong>Scalability Considerations:</strong>
+<ul><li>Use message queue (RabbitMQ) for notification sending</li>
+<li>Batch process alerts by ticker to reduce API calls</li>
+<li>Redis pub/sub for real-time price distribution</li>
+<li>Rate limit notifications (max 10/day per user)</li>
+</ul>
+<strong>Frontend UI:</strong>
+<pre><code>// Add alert dialog
+&lt;PriceAlertDialog&gt;
+  &lt;Select ticker="AAPL" /&gt;
+  &lt;Select condition="below" /&gt;
+  &lt;Input price={170.00} /&gt;
+  &lt;Button&gt;Create Alert&lt;/Button&gt;
+&lt;/PriceAlertDialog&gt;</p><p>// Show active alerts
+{alerts.map(alert =&gt; (
+  &lt;AlertCard key={alert.id}&gt;
+    {alert.ticker} {alert.condition} ${alert.target_price}
+    &lt;Button onClick={() =&gt; deleteAlert(alert.id)}&gt;Delete&lt;/Button&gt;
+  &lt;/AlertCard&gt;
+))}</code></pre>
+&lt;/details&gt;</p><p>---</p><p><h2>🧠 Behavioral Questions</h2></p><p><strong>Q15:</strong> Tell me about a challenging bug you encountered in this project.</p><p>&lt;details&gt;
+&lt;summary&gt;Sample Answer (STAR Method)&lt;/summary&gt;</p><p><strong>Situation:</strong>
+"When implementing the buy/sell feature, I noticed users could sometimes end up with negative cash balances in edge cases."</p><p><strong>Task:</strong>
+"I needed to identify the race condition and ensure transactions were atomic - either fully complete or fully fail."</p><p><strong>Action:</strong>
+"I investigated and found that if two requests came in simultaneously, both could read the cash balance before either deducted it. I implemented database transactions with proper locking:</p><p><pre><code>try:
+    # Query with lock
+    user = User.query.with_for_update().get(user_id)
+    
+    if user.cash &lt; total_cost:
+        return error("Insufficient funds")
+    
+    user.cash -= total_cost
+    transaction = Transaction(...)
+    db.session.add(transaction)
+    db.session.commit()
+except:
+    db.session.rollback()</code></pre></p><p>I also added frontend debouncing to prevent double-clicks and comprehensive unit tests for concurrent scenarios."</p><p><strong>Result:</strong>
+"The bug was eliminated. I learned about database isolation levels, row locking, and the importance of testing edge cases. This made me more careful about concurrent access patterns in other parts of the application."
+&lt;/details&gt;</p><p><strong>Q16:</strong> What are you most proud of in this project?</p><p>&lt;details&gt;
+&lt;summary&gt;Sample Answer&lt;/summary&gt;</p><p>"I'm most proud of the dual-market integration - supporting both US and Indian stocks with separate cash balances. This was challenging because:</p><p><li><strong>Different data sources:</strong> Indian stocks required <code>.NS</code> or <code>.BO</code> suffixes and had different API quirks</li>
+<li><strong>Schema design:</strong> I debated one table vs. two for transactions, ultimately choosing separate tables for cleaner separation</li>
+<li><strong>Currency handling:</strong> Ensuring ₹ and $ were displayed correctly, with proper decimal precision</li>
+<li><strong>User experience:</strong> Building intuitive tabs to switch between markets without confusion</li></p><p>I researched yfinance documentation extensively, tested with various Indian stock symbols, and created a seamless experience where users can trade in both markets from the same dashboard. It taught me about internationalization, working with external APIs, and thinking through data modeling decisions."
+&lt;/details&gt;</p><p><strong>Q17:</strong> What would you improve if you had more time?</p><p>&lt;details&gt;
+&lt;summary&gt;Sample Answer&lt;/summary&gt;</p><p>"Several things:</p><p><strong>1. Testing Coverage:</strong>
+<ul><li>Add pytest for backend unit and integration tests</li>
+<li>Frontend testing with Jest and React Testing Library</li>
+<li>E2E tests with Playwright</li>
+</ul>
+<strong>2. Real-time Updates:</strong>
+<ul><li>WebSocket implementation for live price updates</li>
+<li>Eliminate polling, reduce API calls</li>
+</ul>
+<strong>3. Performance:</strong>
+<ul><li>Redis caching layer for stock prices</li>
+<li>Database query optimization with proper indexing</li>
+<li>Frontend code splitting for faster loads</li>
+</ul>
+<strong>4. Features:</strong>
+<ul><li>Watchlist functionality</li>
+<li>Price alerts and notifications</li>
+<li>Historical performance charts (1M, 3M, 1Y views)</li>
+<li>Export transactions to CSV</li>
+</ul>
+<strong>5. DevOps:</strong>
+<ul><li>Docker containerization</li>
+<li>CI/CD pipeline with GitHub Actions</li>
+<li>Automated deployments to Vercel/Railway</li>
+<li>Comprehensive logging and monitoring</li>
+</ul>
+The AI integration works well, but I'd like to expand it with more sophisticated prompts and maybe fine-tune for better financial advice."
+&lt;/details&gt;</p><p>---</p><p><h2>💡 Tricky Technical Questions</h2></p><p><strong>Q18:</strong> What happens if yfinance API goes down?</p><p>&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p><strong>Current state:</strong> Application would fail to fetch prices, users couldn't trade.</p><p><strong>Solution: Fallback Strategy</strong></p><p><pre><code>def get_stock_price(symbol):
+    try:
+        # Primary: yfinance
+        stock = yf.Ticker(symbol)
+        return stock.info['currentPrice']
+    except:
+        try:
+            # Fallback 1: Polygon API
+            response = requests.get(
+                f'https://api.polygon.io/v2/last/trade/{symbol}',
+                params={'apiKey': POLYGON_API_KEY}
+            )
+            return response.json()['results']['p']
+        except:
+            try:
+                # Fallback 2: Finnhub
+                response = requests.get(
+                    f'https://finnhub.io/api/v1/quote',
+                    params={'symbol': symbol, 'token': FINNHUB_API_KEY}
+                )
+                return response.json()['c']
+            except:
+                # Fallback 3: Cached price (stale data better than none)
+                cached = redis.get(f'price:{symbol}:backup')
+                if cached:
+                    return json.loads(cached)
+                
+                # Last resort: Disable trading, show error
+                raise ServiceUnavailableError("Price data unavailable")</p><p><h1>Cache backup prices daily</h1>
+@celery.task
+def cache_backup_prices():
+    for ticker in get_all_tickers():
+        price = get_stock_price(ticker)
+        redis.setex(f'price:{ticker}:backup', 86400, json.dumps(price))</code></pre></p><p><strong>Additional measures:</strong>
+<ul><li>Circuit breaker pattern</li>
+<li>Monitoring/alerting on API failures</li>
+<li>Graceful degradation (show last known price with warning)</li>
+<li>Status page for users</li>
+</ul>&lt;/details&gt;</p><p><strong>Q19:</strong> How do you prevent a user from buying the same stock twice with one button click?</p><p>&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p><strong>Multiple layers:</strong></p><p><strong>1. Frontend Debouncing:</strong>
+<pre><code>const [isSubmitting, setIsSubmitting] = useState(false);</p><p>const handleBuy = async () =&gt; {
+    if (isSubmitting) return;  // Guard clause
+    
+    setIsSubmitting(true);
+    try {
+        await axios.post('/api/buy', data);
+    } finally {
+        setIsSubmitting(false);  // Re-enable after completion
+    }
+};</p><p>&lt;Button disabled={isSubmitting} onClick={handleBuy}&gt;
+    {isSubmitting ? 'Processing...' : 'Buy'}
+&lt;/Button&gt;</code></pre></p><p><strong>2. Backend Idempotency Key:</strong>
+<pre><code>@app.route('/api/buy', methods=['POST'])
+@jwt_required()
+def buy():
+    idempotency_key = request.headers.get('X-Idempotency-Key')
+    
+    # Check if this request already processed
+    if redis.exists(f'buy:{idempotency_key}'):
+        cached_response = redis.get(f'buy:{idempotency_key}')
+        return json.loads(cached_response)
+    
+    # Process transaction
+    result = process_buy(...)
+    
+    # Cache result for 1 minute
+    redis.setex(f'buy:{idempotency_key}', 60, json.dumps(result))
+    return result</code></pre></p><p><pre><code>// Frontend generates unique key per request
+import { v4 as uuidv4 } from 'uuid';</p><p>const idempotencyKey = uuidv4();
+await axios.post('/api/buy', data, {
+    headers: {'X-Idempotency-Key': idempotencyKey}
+});</code></pre></p><p><strong>3. Database Constraints:</strong>
+<pre><code>-- Prevent duplicate transactions within 1 second
+CREATE UNIQUE INDEX idx_unique_transaction 
+ON transactions(user_id, ticker, shares, created_at);</code></pre></p><p><strong>4. UI Feedback:</strong>
+<ul><li>Show loading spinner</li>
+<li>Disable button during request</li>
+<li>Success toast confirms completion</li>
+<li>Clear form after success</li>
+</ul>&lt;/details&gt;</p><p><strong>Q20:</strong> Explain CORS and why you need it.</p><p>&lt;details&gt;
+&lt;summary&gt;Answer&lt;/summary&gt;</p><p><strong>What is CORS?</strong>
+Cross-Origin Resource Sharing - a security feature that prevents JavaScript on one domain from accessing resources on another domain.</p><p><strong>Why needed in my app:</strong>
+<pre><code>Frontend: http://localhost:5173 (Vite dev server)
+Backend:  http://localhost:5000 (Flask server)</p><p>Different ports = different origins = CORS policy blocks requests</code></pre></p><p><strong>Without CORS:</strong>
+Browser blocks API calls with error:
+<pre><code>Access to XMLHttpRequest at 'http://localhost:5000/api/portfolio' 
+from origin 'http://localhost:5173' has been blocked by CORS policy</code></pre></p><p><strong>Solution:</strong>
+<pre><code>from flask_cors import CORS</p><p>CORS(app, 
+     resources={r"/api/*": {
+         "origins": ["http://localhost:5173", "https://litekite.vercel.app"],
+         "methods": ["GET", "POST", "PUT", "DELETE"],
+         "allow_headers": ["Content-Type", "Authorization"]
+     }},
+     supports_credentials=True)</code></pre></p><p><strong>How it works:</strong>
+<li>Browser sends preflight OPTIONS request</li>
+<li>Server responds with allowed origins in <code>Access-Control-Allow-Origin</code> header</li>
+<li>If origin matches, browser allows actual request</li>
+<li>Otherwise, request blocked</li></p><p><strong>Production considerations:</strong>
+<ul><li>Don't use <code>origins: "*"</code> (security risk)</li>
+<li>Whitelist specific domains</li>
+<li>Use environment variables for origins</li>
+<li>Enable credentials for cookies/auth headers</li>
+</ul>
+<strong>Alternative:</strong> API and frontend on same domain using reverse proxy:
+<pre><code>mydomain.com      → Frontend
+mydomain.com/api  → Backend (proxied)</code></pre>
+&lt;/details&gt;</p><p>---</p><p><h2>📊 Quick Mental Models</h2></p><p><h3>Authentication Flow Diagram</h3>
+You should be able to draw this from memory:</p><p><pre><code>   [User]
+     |
+     | username + password
+     ↓
+[Frontend Login Form]
+     |
+     | POST /api/login
+     ↓
+[Backend @login route]
+     |
+     | check_password_hash()
+     ↓
+[Database User table]
+     ↓
+[Generate JWT token]
+     |
+     | {access_token: "eyJ..."}
+     ↓
+[Frontend stores in localStorage]
+     |
+     | navigate('/portfolio')
+     ↓
+[Protected Route Component]
+     |
+     | GET /api/portfolio + Bearer token
+     ↓
+[Backend @jwt_required()]
+     |
+     | validate token
+     ↓
+[Return portfolio data]</code></pre></p><p><h3>Buy Stock Data Flow</h3>
+<pre><code>      [BuyDialog]
+           |
+    GET /api/quote/:symbol
+           ↓
+      [Display price]
+           |
+    User confirms buy
+           ↓
+    POST /api/buy {symbol, shares}
+           ↓
+      [Backend]
+           |
+    Check user.cash &gt;= cost
+           |
+    db.session.begin()
+    user.cash -= cost
+    transaction = Transaction(...)
+    db.session.add(transaction)
+    db.session.commit()
+           |
+    Return success + new balance
+           ↓
+      [Frontend]
+    Show toast, refresh portfolio</code></pre></p><p><h3>Database Relationships</h3>
+<pre><code>User (1) ←──┐
+             │
+             │ user_id (FK)
+             │
+             ├── (Many) Transaction
+             │
+             └── (Many) IndianStockTransactions</code></pre></p><p>---</p><p><h2>🎤 Mock Interview Questions</h2></p><p>Practice answering these out loud in 60 seconds or less:</p><p><li>"Why Flask instead of Django?"</li>
+<li>"How do you prevent SQL injection?"</li>
+<li>"What's the difference between JWT and session-based auth?"</li>
+<li>"How does React Context work?"</li>
+<li>"Explain your component folder structure"</li>
+<li>"What's SQLAlchemy and why use an ORM?"</li>
+<li>"How do database migrations work?"</li>
+<li>"What's the difference between PUT and POST?"</li>
+<li>"How do you handle errors in async JavaScript?"</li>
+<li>"Explain the Virtual DOM in React"</li>
+<li>"What are React hooks you've used?"</li>
+<li>"How does HTTPS protect data?"</li>
+<li>"What's the difference between authentication and authorization?"</li>
+<li>"How would you deploy this application?"</li>
+<li>"What's your Git workflow?"</li></p><p>---</p><p><h2>🏋️ Daily Practice Routine</h2></p><p><strong>Day 1-2:</strong> Project Basics
+<ul><li>Memorize elevator pitch</li>
+<li>Practice explaining tech stack</li>
+<li>Draw architecture diagram from memory</li>
+</ul>
+<strong>Day 3-4:</strong> Deep Technical
+<ul><li>Authentication flow (draw it)</li>
+<li>Buy/sell transaction flow</li>
+<li>Portfolio calculation algorithm</li>
+</ul>
+<strong>Day 5-6:</strong> System Design
+<ul><li>Scaling strategy</li>
+<li>Caching layers</li>
+<li>Database optimization</li>
+</ul>
+<strong>Day 7:</strong> Mock Interview
+<ul><li>Record yourself answering all questions</li>
+<li>Review and improve weak areas</li>
+</ul>
+<strong>Every Day:</strong>
+<ul><li>Answer 5 questions out loud</li>
+<li>Explain one feature in detail</li>
+<li>Review one file of your code</li>
+</ul>
+---</p><p><strong>Pro Tip:</strong> The best preparation is actually understanding your code, not memorizing answers. If you can explain WHY you made each decision, you'll handle any question they throw at you! 🚀
+</p>
+    
+    <script>
+        // Add print keyboard shortcut hint
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Press Ctrl+P (or Cmd+P on Mac) to print this page as PDF');
+        });
+    </script>
+</body>
+</html>

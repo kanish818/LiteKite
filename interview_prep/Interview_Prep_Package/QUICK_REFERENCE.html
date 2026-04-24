@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiteKite Interview Prep - QUICK REFERENCE</title>
+    <style>
+        @media print {
+            body { margin: 0.5in; }
+            .no-print { display: none; }
+            pre { page-break-inside: avoid; }
+            h1, h2, h3 { page-break-after: avoid; }
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 2.5em;
+        }
+        
+        h2 {
+            color: #34495e;
+            border-bottom: 2px solid #95a5a6;
+            padding-bottom: 8px;
+            margin-top: 40px;
+            font-size: 1.8em;
+        }
+        
+        h3 {
+            color: #555;
+            margin-top: 30px;
+            font-size: 1.4em;
+        }
+        
+        h4 {
+            color: #666;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        
+        code {
+            background: #f5f5f5;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            color: #e74c3c;
+        }
+        
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+            font-size: 0.9em;
+            line-height: 1.4;
+        }
+        
+        pre code {
+            background: none;
+            color: #ecf0f1;
+            padding: 0;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px 0;
+            font-size: 0.95em;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        blockquote {
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+            padding: 10px 20px;
+            background: #ecf0f1;
+            font-style: italic;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 8px 0;
+        }
+        
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .checkbox-item {
+            margin: 8px 0;
+        }
+        
+        .checkbox {
+            margin-right: 8px;
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background: #2980b9;
+        }
+        
+        .info-box {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        hr {
+            border: none;
+            border-top: 2px solid #ddd;
+            margin: 30px 0;
+        }
+        
+        strong {
+            color: #2c3e50;
+        }
+        
+        em {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">🖨️ Print to PDF</button>
+    <p><h1>LiteKite Interview Prep - Quick Reference Sheet</h1></p><p><h2>🎯 30-Second Elevator Pitch</h2></p><p><strong>"LiteKite is a full-stack stock trading platform where users can trade US and Indian stocks with real-time prices, track portfolio performance, and get AI-powered investment analysis. I built it with React TypeScript frontend, Flask Python backend, PostgreSQL database, and integrated Google's Gemini AI for portfolio insights."</strong></p><p>---</p><p><h2>📅 7-Day Prep Schedule</h2></p><p><h3>Day 1: Project Foundation</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Read through <a href="INTERVIEW_PREP_GUIDE.md">INTERVIEW_PREP_GUIDE.md</a> - Project Overview section</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Practice elevator pitch 10 times</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Draw system architecture diagram from memory</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review <a href="LiteKite-main/README.md">README.md</a> and <a href="LiteKite-Backend-master/README.md">Backend README</a></div></p><p><h3>Day 2: Backend Deep Dive</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Read <a href="LiteKite-Backend-master/api/index.py">api/index.py</a> - main endpoints</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review <a href="LiteKite-Backend-master/api/models.py">api/models.py</a> - database schema</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Understand authentication flow (JWT + OAuth)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Practice explaining buy/sell transaction flow</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Answer Q1-Q5 from PRACTICE_QUESTIONS.md out loud</div></p><p><h3>Day 3: Frontend Deep Dive</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review <a href="LiteKite-main/src/App.tsx">src/App.tsx</a> - routing structure</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Read <a href="LiteKite-main/src/AuthContext.tsx">src/AuthContext.tsx</a> - state management</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review <a href="LiteKite-main/src/components/BuyDialog.tsx">src/components/BuyDialog.tsx</a></div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Understand how API calls work</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Answer Q11-Q12 from PRACTICE_QUESTIONS.md</div></p><p><h3>Day 4: Database &amp; Security</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review database schema and relationships</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Understand migrations (Alembic files in <a href="LiteKite-Backend-master/migrations/versions/">migrations/versions/</a>)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Study security measures (CORS, JWT, bcrypt)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Answer Q6-Q7 from PRACTICE_QUESTIONS.md</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Practice explaining portfolio calculation</div></p><p><h3>Day 5: Advanced Topics</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> How would you scale this app?</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Caching strategy (Redis)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Real-time updates (WebSockets)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Answer Q13-Q14 from PRACTICE_QUESTIONS.md</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review common system design patterns</div></p><p><h3>Day 6: Practice &amp; Edge Cases</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Answer all quick-fire questions (Q1-Q5) in 30 seconds each</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Practice explaining complex flows (auth, buy/sell, portfolio)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review tricky questions (Q18-Q20)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Think about edge cases and error handling</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Prepare questions to ask interviewer</div></p><p><h3>Day 7: Mock Interview &amp; Review</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Full mock interview (record yourself)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review this cheat sheet</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Test your project locally (make sure it runs!)</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review weak areas from mock</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Relax and get good sleep!</div></p><p>---</p><p><h2>🔑 Critical Numbers to Remember</h2></p><p>| Metric | Value |
+|--------|-------|
+| Database Tables | 3 (User, Transaction, IndianStockTransactions) |
+| Markets Supported | 2 (US &amp; Indian) |
+| Starting Cash (each) | $10,000 |
+| Auth Methods | 2 (JWT + Google OAuth) |
+| Main API Endpoints | ~15 |
+| Frontend Pages | 10+ routes |
+| React Version | 18 |
+| Flask Version | 3.x |
+| Database | PostgreSQL |</p><p>---</p><p><h2>💻 Tech Stack Cheat Sheet</h2></p><p><h3>Frontend Stack</h3>
+<pre><code>React 18.3 + TypeScript
+├── Vite (build tool)
+├── Tailwind CSS (styling)
+├── Shadcn UI (components)
+├── React Router v6 (routing)
+├── Axios (HTTP client)
+├── Recharts (data viz)
+├── Framer Motion (animations)
+└── Context API (state management)</code></pre></p><p><h3>Backend Stack</h3>
+<pre><code>Flask 3.0 + Python 3.8+
+├── Flask-SQLAlchemy (ORM)
+├── Flask-Migrate + Alembic (migrations)
+├── Flask-JWT-Extended (auth)
+├── Flask-CORS (cross-origin)
+├── Werkzeug (password hashing)
+├── PostgreSQL (database)
+├── yfinance (stock data)
+├── Pandas (data processing)
+└── Google Generative AI (Gemini)</code></pre></p><p><h3>External Services</h3>
+<ul><li>Google OAuth 2.0 (authentication)</li>
+<li>Google Gemini API (AI analysis)</li>
+<li>Yahoo Finance (via yfinance)</li>
+<li>Polygon API (stock data backup)</li>
+<li>Finnhub API (news &amp; fundamentals)</li>
+</ul>
+---</p><p><h2>🏗️ Architecture Diagram (Memorize This!)</h2></p><p><pre><code>┌──────────────────────────────────────────────┐
+│              User Browser                     │
+│  ┌────────────────────────────────────────┐  │
+│  │   React Frontend (Vite)                 │  │
+│  │   - Components (BuyDialog, Portfolio)   │  │
+│  │   - AuthContext (global state)          │  │
+│  │   - React Router (navigation)           │  │
+│  └─────────────┬────────────────────────────┘  │
+└────────────────┼───────────────────────────────┘
+                 │
+              HTTPS/REST
+            (axios + JWT)
+                 │
+┌────────────────▼───────────────────────────────┐
+│         Flask Backend API                      │
+│  ┌──────────────────────────────────────────┐ │
+│  │  Routes (@app.route)                     │ │
+│  │  /api/login, /api/buy, /api/portfolio... │ │
+│  │                                          │ │
+│  │  Middleware                               │ │
+│  │  @jwt_required(), CORS, error handlers   │ │
+│  └─────────────┬────────────────────────────┘ │
+└────────────────┼───────────────────────────────┘
+                 │
+       ┌─────────┼─────────┬─────────────┐
+       │         │         │             │
+   ┌───▼──┐  ┌───▼───┐ ┌───▼────┐  ┌────▼────┐
+   │ Post │  │ Stock │ │ Gemini │  │  Google │
+   │ greSQL│  │ APIs  │ │   AI   │  │  OAuth  │
+   │  DB  │  │(yf...)│ │  API   │  │         │
+   └──────┘  └───────┘ └────────┘  └─────────┘</code></pre></p><p>---</p><p><h2>📋 Database Schema Quick Reference</h2></p><p><h3>User Table</h3>
+<pre><code>CREATE TABLE user (
+    id INTEGER PRIMARY KEY,
+    username VARCHAR(80) UNIQUE,
+    email VARCHAR(120) UNIQUE,
+    hash VARCHAR(255),              -- bcrypt hashed password
+    cash FLOAT DEFAULT 10000.00,    -- US market cash
+    indiancash FLOAT DEFAULT 10000.00,  -- Indian market cash
+    google_id VARCHAR(255) UNIQUE   -- OAuth identifier
+);</code></pre></p><p><h3>Transaction Table</h3>
+<pre><code>CREATE TABLE transaction (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER REFERENCES user(id),
+    ticker VARCHAR(10),
+    name VARCHAR(100),
+    shares INTEGER,
+    price FLOAT,
+    type VARCHAR(4),  -- 'buy' or 'sell'
+    time TIMESTAMP DEFAULT NOW()
+);</code></pre></p><p><strong>Key Relationship:</strong> One User → Many Transactions</p><p>---</p><p><h2>🔐 Authentication Flow (Know This Cold!)</h2></p><p><pre><code>1. User enters username + password
+   ↓
+<li>Frontend: POST /api/login {username, password}</li>
+   ↓
+<li>Backend: Query User table</li>
+   ↓
+<li>Backend: check_password_hash(user.hash, password)</li>
+   ↓
+<li>If valid: create_access_token(identity=user.id)</li>
+   ↓
+<li>Return: {access_token: "eyJhbGc..."}</li>
+   ↓
+<li>Frontend: localStorage.setItem('token', token)</li>
+   ↓
+<li>Frontend: Set Authorization header for all requests</li>
+   ↓
+<li>Protected routes: GET /api/portfolio</li>
+   Headers: {Authorization: "Bearer eyJhbGc..."}
+   ↓
+<li>Backend: @jwt_required() validates token</li>
+    ↓
+<li>Extract user_id from token: get_jwt_identity()</li>
+    ↓
+<li>Return user-specific data</code></pre></li></p><p>---</p><p><h2>💰 Buy Stock Flow (Critical!)</h2></p><p><pre><code>Frontend:
+<li>User enters symbol "AAPL" + shares 10</li>
+<li>GET /api/quote/AAPL → returns price: $175.50</li>
+<li>Display: "10 shares × $175.50 = $1,755.00"</li>
+<li>User clicks "Confirm Buy"</li>
+<li>POST /api/buy {symbol: "AAPL", shares: 10}</li></p><p>Backend:
+<li>Extract user_id from JWT token</li>
+<li>Validate: user.cash &gt;= (shares × price)</li>
+<li>If insufficient: return 400 error</li>
+<li>Database transaction:</li>
+   try:
+       user.cash -= total_cost
+       transaction = Transaction(...)
+       db.session.add(transaction)
+       db.session.commit()
+   except:
+       db.session.rollback()
+<li>Return: {message: "Success", remaining_cash: 8245.00}</li></p><p>Frontend:
+<li>Show success toast</li>
+<li>Update cash display</li>
+<li>Refresh portfolio</code></pre></li></p><p>---</p><p><h2>🧮 Portfolio Calculation Algorithm</h2></p><p><pre><code># Step 1: Get all transactions for user
+transactions = Transaction.query.filter_by(user_id=user_id).all()</p><p><h1>Step 2: Aggregate shares by ticker</h1>
+holdings = {}
+for txn in transactions:
+    if txn.type == 'buy':
+        holdings[txn.ticker] += txn.shares
+    else:  # sell
+        holdings[txn.ticker] -= txn.shares</p><p><h1>Step 3: Filter stocks with shares &gt; 0</h1>
+holdings = {k: v for k, v in holdings.items() if v &gt; 0}</p><p><h1>Step 4: Get current prices</h1>
+for ticker in holdings:
+    current_price = yfinance.Ticker(ticker).info['currentPrice']
+    current_value = holdings[ticker] * current_price
+    
+<h1>Step 5: Calculate profit/loss</h1>
+profit_loss = current_value - invested_amount</code></pre></p><p>---</p><p><h2>🛡️ Security Measures</h2></p><p>| Vulnerability | Prevention |
+|--------------|-----------|
+| SQL Injection | SQLAlchemy ORM (parameterized queries) |
+| XSS | React auto-escapes JSX |
+| CSRF | JWT (stateless), SameSite cookies |
+| Password Attacks | Bcrypt hashing with salt |
+| JWT Theft | HTTPS only, short expiration |
+| API Abuse | Rate limiting (future) |
+| CORS Issues | Flask-CORS with whitelisted origins |</p><p>---</p><p><h2>🔄 API Endpoints Quick List</h2></p><p><h3>Public Routes</h3>
+<pre><code>POST /api/register     - Create account
+POST /api/login        - Get JWT token
+GET  /api/quote/:sym   - Get stock quote
+GET  /api/auth/google  - OAuth flow</code></pre></p><p><h3>Protected Routes (require JWT)</h3>
+<pre><code>GET  /api/portfolio         - User's stock holdings
+GET  /api/indianportfolio   - Indian stock holdings
+POST /api/buy               - Purchase US stocks
+POST /api/sell              - Sell US stocks
+POST /api/buyindian         - Purchase Indian stocks
+POST /api/sellindian        - Sell Indian stocks
+GET  /api/history           - Transaction history
+GET  /api/analyze           - AI portfolio analysis
+GET  /api/fundamentals/:sym - Stock fundamentals
+GET  /api/graph/:sym        - Historical price data</code></pre></p><p>---</p><p><h2>⚡ Must-Know Code Snippets</h2></p><p><h3>JWT Authentication Decorator</h3>
+<pre><code>from flask_jwt_extended import jwt_required, get_jwt_identity</p><p>@app.route('/api/portfolio')
+@jwt_required()
+def portfolio():
+    user_id = get_jwt_identity()
+    # ... fetch portfolio for this user</code></pre></p><p><h3>Password Hashing</h3>
+<pre><code>from werkzeug.security import generate_password_hash, check_password_hash</p><p><h1>Registration</h1>
+hash = generate_password_hash(password)</p><p><h1>Login</h1>
+if check_password_hash(user.hash, password):
+    # Valid password</code></pre></p><p><h3>React Protected Route</h3>
+<pre><code>const ProtectedRoute = ({ children }) =&gt; {
+  const { isAuthenticated } = useAuth();
+  return isAuthenticated ? children : &lt;Navigate to="/login" /&gt;;
+};</code></pre></p><p><h3>Fetch with Auth</h3>
+<pre><code>const token = localStorage.getItem('token');
+const response = await axios.get(<code>${url}/portfolio</code>, {
+  headers: { 'Authorization': <code>Bearer ${token}</code> }
+});</code></pre></p><p>---</p><p><h2>🎤 Top 10 Questions You MUST Answer Well</h2></p><p><li><strong>"Walk me through your project."</strong></li>
+   → Use elevator pitch + architecture diagram</p><p><li><strong>"How does authentication work?"</strong></li>
+   → JWT flow diagram (login → token → protected routes)</p><p><li><strong>"Explain the buy stock flow."</strong></li>
+   → Frontend → API → validation → DB transaction</p><p><li><strong>"How do you calculate portfolio?"</strong></li>
+   → Aggregate transactions, fetch current prices</p><p><li><strong>"Security measures in your app?"</strong></li>
+   → Bcrypt, JWT, CORS, SQLAlchemy, input validation</p><p><li><strong>"Why Flask over Django/FastAPI?"</strong></li>
+   → Lightweight, flexible, good for APIs, familiar</p><p><li><strong>"Database schema and relationships?"</strong></li>
+   → 3 tables, User 1→M Transaction</p><p><li><strong>"How would you scale this?"</strong></li>
+   → Redis cache, load balancing, DB replicas, CDN</p><p><li><strong>"Biggest challenge?"</strong></li>
+   → Race conditions in transactions (use DB locking)</p><p><li><strong>"What would you improve?"</strong></li>
+    → Testing, WebSockets, caching, k8s deployment</p><p>---</p><p><h2>💡 When You Go Blank During Interview</h2></p><p><h3>Stalling Strategies (Use These!)</h3>
+<ul><li>"That's a great question, let me think for a moment..."</li>
+<li>"Could you clarify what you mean by [X]?"</li>
+<li>"Let me draw a diagram to explain this better..."</li>
+<li>"In my project, I encountered something similar..."</li>
+<li><em>Take a sip of water</em></li>
+</ul>
+<h3>Redirect to Your Strengths</h3>
+<ul><li>"I haven't implemented [X] specifically, but in LiteKite I used [Y] which has similar principles..."</li>
+<li>"I'm not familiar with that exact approach, but here's how I solved it..."</li>
+<li>"That's an interesting problem. Based on my experience with [related topic], I would approach it by..."</li>
+</ul>
+<h3>Be Honest</h3>
+<ul><li>"I don't have deep experience with [X], but I understand it involves [Y and Z]"</li>
+<li>"That's something I'd need to research more, but I'd start by looking at [documentation/resource]"</li>
+</ul>
+---</p><p><h2>🎯 Final Pre-Interview Checklist</h2></p><p><h3>1 Hour Before</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Review this cheat sheet</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Practice elevator pitch 3 times</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Draw architecture diagram from memory</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Test camera, mic, internet connection</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Have water ready</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> Close distracting apps/tabs</div></p><p><h3>Mental Preparation</h3>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> "I built this project and understand it deeply"</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> "I can explain my decisions confidently"</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> "It's okay to say 'I don't know' and show how I'd learn"</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> "I'll think out loud and show my problem-solving"</div>
+<div class="checkbox-item"><input type="checkbox" class="checkbox" disabled> "I'll ask clarifying questions when needed"</div></p><p><h3>During Interview - Remember to:</h3>
+✅ Make eye contact and smile
+✅ Speak clearly and at moderate pace
+✅ Use the whiteboard/screen share for diagrams
+✅ Ask for clarification when needed
+✅ Mention trade-offs in your decisions
+✅ Show enthusiasm about your project
+✅ Have 2-3 questions ready for them</p><p><h3>Don't:</h3>
+❌ Memorize answers word-for-word (sounds robotic)
+❌ Rush through explanations
+❌ Say "it just works" without explaining HOW
+❌ Badmouth any technology
+❌ Lie about what you know
+❌ Go completely silent for long periods</p><p>---</p><p><h2>🚀 Key Talking Points to Weave In</h2></p><p><ul><li><strong>"In LiteKite, I implemented..."</strong> (bring it back to YOUR project)</li>
+<li><strong>"I chose [X] over [Y] because..."</strong> (show decision-making)</li>
+<li><strong>"The trade-off was..."</strong> (demonstrate understanding of complexity)</li>
+<li><strong>"If I were to scale this..."</strong> (show forward thinking)</li>
+<li><strong>"I learned [X] by..."</strong> (demonstrate learning ability)</li>
+<li><strong>"An interesting challenge was..."</strong> (show problem-solving)</li>
+</ul>
+---</p><p><h2>📊 Mental Model: Full Request Lifecycle</h2></p><p><pre><code>User Action (Click "Buy")
+    ↓
+React Component (BuyDialog.tsx)
+    ↓
+Event Handler (handleBuy)
+    ↓
+Axios HTTP Request
+    ↓
+    ... NETWORK ...
+    ↓
+Flask Route (@app.route('/api/buy'))
+    ↓
+Authentication (@jwt_required)
+    ↓
+Business Logic (validate, calculate)
+    ↓
+SQLAlchemy ORM
+    ↓
+PostgreSQL Database
+    ↓
+    ... DATABASE ...
+    ↓
+Response back to Flask
+    ↓
+JSON serialization
+    ↓
+    ... NETWORK ...
+    ↓
+Axios Promise Resolution
+    ↓
+React State Update (setPortfolio)
+    ↓
+Component Re-render
+    ↓
+UI Update (user sees success toast)</code></pre></p><p>You should be able to explain EACH step of this flow!</p><p>---</p><p><h2>🎓 Advanced Topics (If They Go Deep)</h2></p><p><h3>Database Indexing</h3>
+<pre><code>CREATE INDEX idx_user_txn ON transaction(user_id);
+CREATE INDEX idx_ticker ON transaction(ticker);</code></pre>
+<strong>Why:</strong> Speeds up queries filtering by user_id or ticker</p><p><h3>ACID Properties</h3>
+<ul><li><strong>Atomicity:</strong> All or nothing (commit or rollback)</li>
+<li><strong>Consistency:</strong> Valid state always</li>
+<li><strong>Isolation:</strong> Concurrent transactions don't interfere</li>
+<li><strong>Durability:</strong> Committed data persists</li>
+</ul>
+<h3>REST Principles</h3>
+<ul><li><strong>GET:</strong> Retrieve data (idempotent)</li>
+<li><strong>POST:</strong> Create resource</li>
+<li><strong>PUT:</strong> Update/replace resource (idempotent)</li>
+<li><strong>DELETE:</strong> Remove resource (idempotent)</li>
+</ul>
+<h3>JWT Structure</h3>
+<pre><code>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9  ← Header
+.eyJ1c2VyX2lkIjoxMjN9                ← Payload (user_id: 123)
+.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV   ← Signature</code></pre></p><p><h3>React Hooks Used</h3>
+<ul><li><code>useState</code> - Component state</li>
+<li><code>useEffect</code> - Side effects (API calls)</li>
+<li><code>useContext</code> - Global state (auth)</li>
+<li><code>useNavigate</code> - Programmatic routing</li>
+<li>Custom: <code>useToast</code> - Notifications</li>
+</ul>
+---</p><p><h2>🔥 Common Mistakes to Avoid</h2></p><p><li><strong>Saying "I don't know" and stopping</strong></li>
+   - Instead: "I haven't implemented that, but I would approach it by..."</p><p><li><strong>Overcomplicating simple answers</strong></li>
+   - Start simple, go deep only if asked</p><p><li><strong>Not asking clarifying questions</strong></li>
+   - Shows you think before coding</p><p><li><strong>Badmouthing technologies</strong></li>
+   - "I chose X for this use case" not "Y is terrible"</p><p><li><strong>Going silent while thinking</strong></li>
+   - Verbalize your thought process</p><p><li><strong>Memorizing without understanding</strong></li>
+   - They can tell. Focus on understanding WHY.</p><p>---</p><p><h2>💪 Confidence Affirmations</h2></p><p><strong>Read these before your interview:</strong></p><p>✅ I built a full-stack application from scratch
+✅ I integrated multiple external APIs successfully
+✅ I implemented authentication and database management
+✅ I can explain every technical decision I made
+✅ I solved real problems (concurrency, data consistency)
+✅ I learned new technologies to build this
+✅ I'm prepared for both high-level and deep technical questions
+✅ It's okay not to know everything - I can learn
+✅ My project demonstrates real engineering skills
+✅ I've got this! 🚀</p><p>---</p><p><h2>📱 Contact &amp; Resources</h2></p><p><h3>If You Need More Help:</h3>
+<ul><li>Review full guide: <a href="INTERVIEW_PREP_GUIDE.md">INTERVIEW_PREP_GUIDE.md</a></li>
+<li>Practice questions: <a href="PRACTICE_QUESTIONS.md">PRACTICE_QUESTIONS.md</a></li>
+<li>Project README: <a href="LiteKite-main/README.md">README.md</a></li>
+</ul>
+<h3>Quick Links:</h3>
+<ul><li>Flask Docs: https://flask.palletsprojects.com</li>
+<li>React Docs: https://react.dev</li>
+<li>SQLAlchemy: https://docs.sqlalchemy.org</li>
+<li>JWT.io: https://jwt.io</li>
+</ul>
+---</p><p><strong>Last Words of Wisdom:</strong></p><p>&gt; The best answer isn't always the most technically perfect one. 
+&gt; It's the one that shows:
+&gt; 1. You understand the problem
+&gt; 2. You can think through solutions
+&gt; 3. You consider trade-offs
+&gt; 4. You can communicate clearly
+&gt; 5. You're excited to learn more</p><p><strong>You built this. You understand it. Now go show them what you know! 💪</strong></p><p>Good luck! 🍀
+</p>
+    
+    <script>
+        // Add print keyboard shortcut hint
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Press Ctrl+P (or Cmd+P on Mac) to print this page as PDF');
+        });
+    </script>
+</body>
+</html>
