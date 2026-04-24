@@ -1,909 +1,0 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LiteKite Interview Prep - INTERVIEW PREP GUIDE</title>
-    <style>
-        @media print {
-            body { margin: 0.5in; }
-            .no-print { display: none; }
-            pre { page-break-inside: avoid; }
-            h1, h2, h3 { page-break-after: avoid; }
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background: #fff;
-        }
-        
-        h1 {
-            color: #2c3e50;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 10px;
-            margin-top: 0;
-            font-size: 2.5em;
-        }
-        
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #95a5a6;
-            padding-bottom: 8px;
-            margin-top: 40px;
-            font-size: 1.8em;
-        }
-        
-        h3 {
-            color: #555;
-            margin-top: 30px;
-            font-size: 1.4em;
-        }
-        
-        h4 {
-            color: #666;
-            margin-top: 20px;
-            font-size: 1.2em;
-        }
-        
-        code {
-            background: #f5f5f5;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 0.9em;
-            color: #e74c3c;
-        }
-        
-        pre {
-            background: #2c3e50;
-            color: #ecf0f1;
-            padding: 15px;
-            border-radius: 5px;
-            overflow-x: auto;
-            font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
-            font-size: 0.9em;
-            line-height: 1.4;
-        }
-        
-        pre code {
-            background: none;
-            color: #ecf0f1;
-            padding: 0;
-        }
-        
-        table {
-            border-collapse: collapse;
-            width: 100%;
-            margin: 20px 0;
-            font-size: 0.95em;
-        }
-        
-        th, td {
-            border: 1px solid #ddd;
-            padding: 12px;
-            text-align: left;
-        }
-        
-        th {
-            background-color: #3498db;
-            color: white;
-            font-weight: bold;
-        }
-        
-        tr:nth-child(even) {
-            background-color: #f9f9f9;
-        }
-        
-        blockquote {
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            padding: 10px 20px;
-            background: #ecf0f1;
-            font-style: italic;
-        }
-        
-        ul, ol {
-            margin: 15px 0;
-            padding-left: 30px;
-        }
-        
-        li {
-            margin: 8px 0;
-        }
-        
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
-        
-        .checkbox-item {
-            margin: 8px 0;
-        }
-        
-        .checkbox {
-            margin-right: 8px;
-        }
-        
-        .print-button {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-            z-index: 1000;
-        }
-        
-        .print-button:hover {
-            background: #2980b9;
-        }
-        
-        .info-box {
-            background: #fff3cd;
-            border: 1px solid #ffc107;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        .success-box {
-            background: #d4edda;
-            border: 1px solid #28a745;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        .warning-box {
-            background: #f8d7da;
-            border: 1px solid #dc3545;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 20px 0;
-        }
-        
-        hr {
-            border: none;
-            border-top: 2px solid #ddd;
-            margin: 30px 0;
-        }
-        
-        strong {
-            color: #2c3e50;
-        }
-        
-        em {
-            color: #555;
-        }
-    </style>
-</head>
-<body>
-    <button class="print-button no-print" onclick="window.print()">🖨️ Print to PDF</button>
-    <p><h1>LiteKite - Full Stack Interview Preparation Guide</h1></p><p><h2>📋 Table of Contents</h2>
-<li><a href="#elevator-pitch">Project Overview &amp; Elevator Pitch</a></li>
-<li><a href="#system-architecture">System Architecture</a></li>
-<li><a href="#tech-stack">Tech Stack Deep Dive</a></li>
-<li><a href="#key-features">Key Features Implementation</a></li>
-<li><a href="#database-design">Database Design</a></li>
-<li><a href="#api-endpoints">API Endpoints &amp; Flow</a></li>
-<li><a href="#authentication-security">Authentication &amp; Security</a></li>
-<li><a href="#frontend-architecture">Frontend Architecture</a></li>
-<li><a href="#interview-qa">Common Interview Questions &amp; Answers</a></li>
-<li><a href="#interview-tips">Interview Tips &amp; Strategy</a></li></p><p>---</p><p><h2>🎯 Elevator Pitch (30 seconds)</h2></p><p><strong>"LiteKite is a full-stack stock portfolio management platform that allows users to trade stocks with real-time prices. It supports both US and Indian stock markets, features AI-powered portfolio analysis using Google's Gemini API, and provides comprehensive transaction tracking and portfolio visualization."</strong></p><p><h3>Key Stats to Remember:</h3>
-<ul><li>Real-time stock data integration</li>
-<li>Dual market support (US &amp; Indian stocks)</li>
-<li>AI-powered analysis</li>
-<li>$10,000 virtual cash per market</li>
-<li>JWT + Google OAuth authentication</li>
-</ul>
----</p><p><h2>🏗️ System Architecture</h2></p><p><h3>High-Level Architecture</h3>
-<pre><code>┌─────────────┐      HTTPS/REST      ┌──────────────┐
-│   Frontend  │ ◄──────────────────► │   Backend    │
-│  (React +   │                      │   (Flask)    │
-│    Vite)    │                      │              │
-└─────────────┘                      └───────┬──────┘
-                                            │
-                              ┌─────────────┼──────────────┐
-                              │             │              │
-                         ┌────▼────┐   ┌────▼────┐   ┌────▼────┐
-                         │PostgreSQL│   │ External│   │ Gemini  │
-                         │ Database │   │Stock API│   │   AI    │
-                         └──────────┘   └─────────┘   └─────────┘</code></pre></p><p><h3>Technology Stack</h3></p><p><strong>Frontend:</strong>
-<ul><li>React 18 with TypeScript</li>
-<li>Vite (build tool)</li>
-<li>Tailwind CSS + Shadcn UI (styling)</li>
-<li>React Router v6 (routing)</li>
-<li>Axios (HTTP client)</li>
-<li>Recharts (data visualization)</li>
-<li>Framer Motion (animations)</li>
-</ul>
-<strong>Backend:</strong>
-<ul><li>Flask 3.x (Python web framework)</li>
-<li>SQLAlchemy (ORM)</li>
-<li>Flask-Migrate + Alembic (database migrations)</li>
-<li>Flask-JWT-Extended (authentication)</li>
-<li>Flask-CORS (cross-origin requests)</li>
-<li>PostgreSQL (database)</li>
-<li>yfinance (stock data)</li>
-<li>Pandas (data processing)</li>
-</ul>
-<strong>External Services:</strong>
-<ul><li>Google Gemini AI API</li>
-<li>Yahoo Finance API (via yfinance)</li>
-<li>Polygon API</li>
-<li>Finnhub API</li>
-<li>Google OAuth 2.0</li>
-</ul>
----</p><p><h2>🔑 Key Features Implementation</h2></p><p><h3>1. <strong>User Authentication</strong></h3></p><p><strong>Technologies:</strong> JWT, bcrypt, Google OAuth</p><p><strong>How it works:</strong>
-<pre><code># Backend - JWT token generation
-access_token = create_access_token(identity=user_id)</p><p><h1>Password hashing</h1>
-hash = generate_password_hash(password)</p><p><h1>Verification</h1>
-check_password_hash(user.hash, password)</code></pre></p><p><strong>Frontend Flow:</strong>
-<pre><code>// AuthContext manages global auth state
-<ul><li>Login → JWT stored in localStorage</li>
-<li>Axios interceptor adds Bearer token to all requests</li>
-<li>Protected routes check isAuthenticated state</code></pre></li>
-</ul>
-<strong>Why JWT?</strong>
-<ul><li>Stateless authentication</li>
-<li>Scalable (no server-side session storage)</li>
-<li>Can be easily validated on backend</li>
-<li>Supports expiration</li>
-</ul>
-<h3>2. <strong>Real-Time Stock Data</strong></h3></p><p><strong>Implementation:</strong>
-<pre><code># Using yfinance for stock data
-import yfinance as yf</p><p>stock = yf.Ticker(symbol)
-data = stock.history(period="1d")
-current_price = data['Close'].iloc[-1]</code></pre></p><p><strong>Data Sources:</strong>
-<ul><li>US Stocks: yfinance, Polygon API</li>
-<li>Indian Stocks: yfinance with .NS suffix</li>
-<li>News: Finnhub API</li>
-<li>Fundamentals: Company financials from yfinance</li>
-</ul>
-<h3>3. <strong>Portfolio Management</strong></h3></p><p><strong>Business Logic:</strong>
-<pre><code># Calculate portfolio for a user
-<li>Fetch all transactions (buys &amp; sells)</li>
-<li>Group by ticker symbol</li>
-<li>Calculate net shares = sum(buy_shares) - sum(sell_shares)</li>
-<li>Get current price for each holding</li>
-<li>Calculate total_value = shares × current_price</li>
-<li>Calculate profit/loss vs purchase price</code></pre></li></p><p><strong>Database Query:</strong>
-<pre><code>transactions = Transaction.query.filter_by(user_id=user_id).all()
-<h1>Aggregate shares by ticker</h1>
-portfolio = {}
-for txn in transactions:
-    if txn.type == 'buy':
-        portfolio[txn.ticker] = portfolio.get(txn.ticker, 0) + txn.shares
-    else:
-        portfolio[txn.ticker] = portfolio.get(txn.ticker, 0) - txn.shares</code></pre></p><p><h3>4. <strong>AI-Powered Analysis (Gemini Integration)</strong></h3></p><p><strong>How it works:</strong>
-<pre><code>import google.generativeai as genai</p><p><h1>Configure API</h1>
-genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-pro')</p><p><h1>Generate analysis</h1>
-prompt = f"Analyze this portfolio: {portfolio_data}"
-response = model.generate_content(prompt)</code></pre></p><p><strong>Use Cases:</strong>
-<ul><li>Portfolio risk assessment</li>
-<li>Stock recommendations</li>
-<li>Market insights based on holdings</li>
-<li>Investment strategy suggestions</li>
-</ul>
-<h3>5. <strong>Buy/Sell Transactions</strong></h3></p><p><strong>Validation Flow:</strong>
-<pre><code># BUY validation:
-<li>Check if user has sufficient cash</li>
-<li>Verify stock symbol exists</li>
-<li>Get current price</li>
-<li>Calculate total_cost = shares × price</li>
-<li>Deduct cash from user account</li>
-<li>Create transaction record</li></p><p><h1>SELL validation:</h1>
-<li>Check if user owns enough shares</li>
-<li>Get current price</li>
-<li>Calculate total_value = shares × price</li>
-<li>Add cash to user account</li>
-<li>Create transaction record</code></pre></li></p><p><strong>Database Transaction (ACID):</strong>
-<pre><code>try:
-    user.cash -= total_cost
-    transaction = Transaction(...)
-    db.session.add(transaction)
-    db.session.commit()
-except:
-    db.session.rollback()</code></pre></p><p>---</p><p><h2>💾 Database Design</h2></p><p><h3>Schema</h3></p><p><strong>User Table:</strong>
-<pre><code>- id (PK)
-<ul><li>username (unique)</li>
-<li>fullname</li>
-<li>email (unique)</li>
-<li>phone (unique)</li>
-<li>hash (password)</li>
-<li>cash (default: 10000.00)</li>
-<li>indiancash (default: 10000.00)</li>
-<li>nationality</li>
-<li>google_id (for OAuth)</code></pre></li>
-</ul>
-<strong>Transaction Table:</strong>
-<pre><code>- id (PK)
-<ul><li>user_id (FK → User)</li>
-<li>ticker</li>
-<li>name</li>
-<li>shares</li>
-<li>price</li>
-<li>type ('buy' or 'sell')</li>
-<li>time (timestamp)</code></pre></li>
-</ul>
-<strong>IndianStockTransactions Table:</strong>
-<pre><code>- Same structure as Transaction
-<ul><li>Separate table for Indian market tracking</code></pre></li>
-</ul>
-<h3>Relationships</h3>
-<ul><li>One-to-Many: User → Transactions</li>
-<li>Cascade delete: If user deleted, all transactions deleted</li>
-</ul>
-<h3>Indexing Strategy</h3>
-<pre><code>-- For faster queries
-CREATE INDEX idx_user_transactions ON transaction(user_id);
-CREATE INDEX idx_ticker ON transaction(ticker);
-CREATE INDEX idx_time ON transaction(time DESC);</code></pre></p><p>---</p><p><h2>🔌 API Endpoints</h2></p><p><h3>Authentication</h3>
-<pre><code>POST /api/register          - Create new user
-POST /api/login             - Login (returns JWT)
-GET  /api/auth/google       - Initiate Google OAuth
-GET  /api/auth/callback     - OAuth callback</code></pre></p><p><h3>User</h3>
-<pre><code>GET  /api/user              - Get user details (protected)
-PUT  /api/user/profile      - Update profile (protected)</code></pre></p><p><h3>Stock Operations</h3>
-<pre><code>GET  /api/quote/:symbol     - Get stock quote
-GET  /api/search            - Search stocks
-GET  /api/fundamentals/:sym - Get stock fundamentals
-GET  /api/graph/:symbol     - Get historical data</code></pre></p><p><h3>Trading</h3>
-<pre><code>POST /api/buy               - Buy stocks (protected)
-POST /api/sell              - Sell stocks (protected)
-POST /api/buyindian         - Buy Indian stocks
-POST /api/sellindian        - Sell Indian stocks</code></pre></p><p><h3>Portfolio</h3>
-<pre><code>GET  /api/portfolio         - Get user portfolio (protected)
-GET  /api/indianportfolio   - Get Indian portfolio
-GET  /api/history           - Get transaction history
-GET  /api/analyze           - AI portfolio analysis</code></pre></p><p><h3>Request/Response Example</h3></p><p><strong>Buy Stock:</strong>
-<pre><code>// Request
-POST /api/buy
-Headers: Authorization: Bearer &lt;jwt_token&gt;
-Body: {
-  "symbol": "AAPL",
-  "shares": 10
-}</p><p>// Response
-{
-  "message": "Successfully purchased 10 shares of AAPL",
-  "transaction": {
-    "id": 123,
-    "ticker": "AAPL",
-    "shares": 10,
-    "price": 175.50,
-    "total": 1755.00,
-    "remaining_cash": 8245.00
-  }
-}</code></pre></p><p>---</p><p><h2>🔐 Authentication &amp; Security</h2></p><p><h3>Security Measures</h3></p><p><li><strong>Password Security:</strong></li>
-   - Bcrypt hashing with salt
-   - No plain text storage
-   - Hash verification on login</p><p><li><strong>JWT Security:</strong></li>
-   - Signed with secret key
-   - Includes expiration
-   - Stored in localStorage (frontend)
-   - Sent in Authorization header</p><p><li><strong>CORS Configuration:</strong></li>
-   <pre><code>   CORS(app, 
-        resources={r"/api/*": {"origins": FRONTEND_URL}},
-        supports_credentials=True)
-   </p><p><li><strong>Session Security:</strong></li>
-   - Secure cookies (HTTPS only)
-   - HttpOnly flag
-   - SameSite=None for cross-origin</p><p><li><strong>Input Validation:</strong></li>
-   - Backend validates all inputs
-   - SQL injection prevention via SQLAlchemy
-   - XSS prevention via React (auto-escaping)</p><p><li><strong>Environment Variables:</strong></li>
-   - API keys in .env
-   - Not committed to Git
-   - Different for dev/prod</p><p><h3>OAuth 2.0 Flow</h3>
-</code></pre>
-<li>User clicks "Login with Google"</li>
-<li>Frontend → GET /api/auth/google</li>
-<li>Backend redirects to Google consent page</li>
-<li>User approves</li>
-<li>Google → GET /api/auth/callback with code</li>
-<li>Backend exchanges code for user info</li>
-<li>Create/login user, generate JWT</li>
-<li>Redirect to frontend with token</li>
-<pre><code>
----</p><p><h2>🎨 Frontend Architecture</h2></p><p><h3>Component Structure</h3>
-</code></pre>
-src/
-├── components/          # Reusable UI components
-│   ├── ui/             # Shadcn base components
-│   ├── BuyDialog.tsx   # Buy stock modal
-│   ├── SellDialog.tsx  # Sell stock modal
-│   ├── Graph.tsx       # Stock charts
-│   └── Navbar.tsx      # Navigation
-├── pages/              # Route pages
-│   ├── Portfolio.tsx
-│   ├── Login.tsx
-│   └── Trade.tsx
-├── lib/                # Utilities
-│   ├── utils.ts
-│   └── url.ts          # API base URL
-├── hooks/              # Custom hooks
-└── AuthContext.tsx     # Global auth state
-<pre><code>
-<h3>State Management</h3></p><p><strong>Context API for Auth:</strong></code></pre>typescript
-AuthContext provides:
-<ul><li>isAuthenticated: boolean</li>
-<li>login(username, password)</li>
-<li>logout()</li>
-<li>register(username, password)</li>
-<li>setAuthToken(token)</li>
-</ul><pre><code>
-<strong>Local State with useState:</strong>
-<ul><li>Component-level data (forms, modals)</li>
-<li>Portfolio data (fetched from API)</li>
-</ul>
-<strong>Why not Redux?</strong>
-<ul><li>App complexity doesn't require it</li>
-<li>Context API sufficient for auth</li>
-<li>Most data fetched fresh from API</li>
-</ul>
-<h3>Routing Strategy</h3>
-</code></pre>typescript
-// Protected Route HOC
-&lt;ProtectedRoute&gt;
-  {isAuthenticated ? &lt;Component /&gt; : &lt;Navigate to="/login" /&gt;}
-&lt;/ProtectedRoute&gt;</p><p>// Routes
-/              → LandingPage (public)
-/login         → Login (public)
-/portfolio     → Portfolio (protected)
-/buy           → Buy (protected)
-/sell          → Sell (protected)
-<pre><code>
-<h3>API Communication</h3>
-</code></pre>typescript
-// axios instance with interceptors
-axios.defaults.headers.common['Authorization'] = <code>Bearer ${token}</code>;</p><p>// Error handling
-try {
-  const response = await axios.get(<code>${url}/portfolio</code>);
-} catch (error) {
-  if (error.response?.status === 401) {
-    // Redirect to login
-  }
-  // Show error toast
-}
-<pre><code>
----</p><p><h2>💬 Common Interview Questions &amp; Answers</h2></p><p><h3>Basic Questions</h3></p><p><strong>Q1: Walk me through your project.</strong></p><p><strong>A:</strong> "LiteKite is a full-stack stock trading platform I built. On the backend, I used Flask with PostgreSQL to handle user authentication, stock transactions, and portfolio management. The frontend is built with React and TypeScript using Vite as the build tool. Users can trade both US and Indian stocks with real-time prices, view their portfolio with interactive charts using Recharts, and get AI-powered analysis through the Gemini API. I implemented JWT-based authentication with Google OAuth support, and used SQLAlchemy for database operations with proper migrations."</p><p><strong>Q2: Why did you choose Flask over Django or FastAPI?</strong></p><p><strong>A:</strong> "I chose Flask because:
-<li>It's lightweight and gives me more control over the architecture</li>
-<li>I only needed RESTful APIs, not a full MVC framework like Django</li>
-<li>Flask-SQLAlchemy provides excellent ORM capabilities</li>
-<li>Great ecosystem with Flask-JWT-Extended, Flask-CORS, etc.</li>
-<li>I'm familiar with Flask and it's perfect for this scale</li></p><p>If I were building this today, I might consider FastAPI for automatic API documentation and type hints, but Flask serves my needs well."</p><p><strong>Q3: How do you handle user authentication?</strong></p><p><strong>A:</strong> "I use a dual approach:
-<li><strong>Traditional login:</strong> Username/password with bcrypt hashing. On successful login, Flask-JWT-Extended generates an access token that's sent to the frontend and stored in localStorage.</li>
-<li><strong>Google OAuth:</strong> Using Authlib, I redirect users to Google for authentication, receive a code on callback, exchange it for user info, and generate a JWT token.</li></p><p>All protected routes use the @jwt_required decorator, and the frontend includes the Bearer token in the Authorization header for every authenticated request."</p><p><strong>Q4: How do you fetch real-time stock prices?</strong></p><p><strong>A:</strong> "I use the yfinance library which pulls data from Yahoo Finance:</code></pre>python
-stock = yf.Ticker('AAPL')
-data = stock.history(period='1d')
-current_price = data['Close'].iloc[-1]
-<pre><code>
-For Indian stocks, I append '.NS' or '.BO' suffix for NSE/BSE exchanges. I also have fallback APIs like Polygon and Finnhub for additional data and news."</p><p><strong>Q5: Explain your database schema.</strong></p><p><strong>A:</strong> "I have three main tables:
-<li><strong>User:</strong> Stores user credentials, separate cash balances for US and Indian markets (default $10,000 each), and OAuth IDs</li>
-<li><strong>Transaction:</strong> Records every buy/sell with user_id (foreign key), ticker, shares, price, type, and timestamp</li>
-<li><strong>IndianStockTransactions:</strong> Separate table for Indian market to keep data organized</li></p><p>The relationship is one-to-many from User to Transactions. I use indexes on user_id and ticker for faster queries."</p><p><h3>Intermediate Questions</h3></p><p><strong>Q6: How do you calculate a user's portfolio?</strong></p><p><strong>A:</strong> "The portfolio calculation involves:
-<li>Query all transactions for the user</li>
-<li>Aggregate by ticker: <code>net_shares = SUM(buy_shares) - SUM(sell_shares)</code></li>
-<li>Fetch current price for each stock</li>
-<li>Calculate current value: <code>shares × current_price</code></li>
-<li>Calculate profit/loss: <code>current_value - total_invested</code></li>
-<li>Return portfolio with metrics</li></p><p>I optimize this with SQL aggregation rather than Python loops:</code></pre>python
-from sqlalchemy import func
-totals = db.session.query(
-    Transaction.ticker,
-    func.sum(case((Transaction.type=='buy', Transaction.shares), else_=-Transaction.shares))
-).group_by(Transaction.ticker).all()
-"</p><p><strong>Q7: How do you ensure data consistency in buy/sell operations?</strong></p><p><strong>A:</strong> "I use database transactions with rollback on error:
-<pre><code>try:
-    # Validate user has enough cash/shares
-    if user.cash &lt; total_cost:
-        return error
-    
-    # Update user balance
-    user.cash -= total_cost
-    
-    # Create transaction record
-    txn = Transaction(...)
-    db.session.add(txn)
-    
-    # Commit atomically
-    db.session.commit()
-except Exception as e:
-    db.session.rollback()
-    return error</code></pre></p><p>This ensures ACID properties - either both operations succeed or both fail."</p><p><strong>Q8: How does the Gemini AI integration work?</strong></p><p><strong>A:</strong> "I use Google's Generative AI SDK:
-<li>User clicks 'Analyze Portfolio'</li>
-<li>Backend fetches portfolio data</li>
-<li>I construct a prompt with portfolio details, current prices, and context</li>
-<li>Send to Gemini API via <code>genai.GenerativeModel('gemini-pro').generate_content()</code></li>
-<li>Parse response and return insights to frontend</li></p><p>The AI provides investment advice, risk assessment, and diversification suggestions based on the user's holdings."</p><p><strong>Q9: How do you handle CORS in your application?</strong></p><p><strong>A:</strong> "I configured Flask-CORS to allow requests from my frontend origin:
-<pre><code>CORS(app, 
-     resources={r'/api/*': {'origins': FRONTEND_URL}},
-     supports_credentials=True)</code></pre></p><p>This allows my React app to make cross-origin requests while maintaining security. I also set proper session cookie flags (Secure, HttpOnly, SameSite) for production."</p><p><strong>Q10: Explain your frontend routing strategy.</strong></p><p><strong>A:</strong> "I use React Router v6 with protected routes:
-<pre><code>const ProtectedRoute = ({ children }) =&gt; {
-  const { isAuthenticated } = useAuth();
-  return isAuthenticated ? children : &lt;Navigate to='/login' /&gt;;
-};</code></pre></p><p>Public routes like landing page and login are accessible to all. Protected routes (portfolio, buy, sell) check authentication status from AuthContext. If not authenticated, users are redirected to login."</p><p><h3>Advanced Questions</h3></p><p><strong>Q11: How would you scale this application to handle 1 million users?</strong></p><p><strong>A:</strong> "Several strategies:</p><p><strong>Backend:</strong>
-<li><strong>Caching:</strong> Redis for stock prices (refresh every 5s), user sessions</li>
-<li><strong>Database:</strong> </li>
-   - Read replicas for portfolio queries
-   - Partitioning transactions table by date
-   - Connection pooling with pgBouncer
-<li><strong>Load balancing:</strong> Multiple Flask instances behind Nginx</li>
-<li><strong>Async processing:</strong> Celery for heavy tasks like portfolio analysis</li>
-<li><strong>CDN:</strong> Serve static assets via CloudFlare</li></p><p><strong>Frontend:</strong>
-<li>Code splitting and lazy loading</li>
-<li>Service workers for offline support</li>
-<li>Virtualized lists for large transaction history</li></p><p><strong>Infrastructure:</strong>
-<ul><li>Containerize with Docker</li>
-<li>Kubernetes for orchestration</li>
-<li>Auto-scaling based on load</li>
-<li>Separate microservices for trading, analytics, user management"</li>
-</ul>
-<strong>Q12: Security vulnerabilities and how you prevent them?</strong></p><p><strong>A:</strong> 
-<li><strong>SQL Injection:</strong> Using SQLAlchemy ORM with parameterized queries</li>
-<li><strong>XSS:</strong> React automatically escapes content, and I sanitize user inputs</li>
-<li><strong>CSRF:</strong> SameSite cookies and JWT tokens (stateless)</li>
-<li><strong>Password attacks:</strong> Bcrypt with salt, rate limiting on login attempts</li>
-<li><strong>JWT vulnerabilities:</strong> Short expiration, secret rotation, HTTPS only</li>
-<li><strong>API abuse:</strong> Rate limiting middleware, input validation</li>
-<li><strong>Sensitive data:</strong> Environment variables, no secrets in code, .gitignore for .env</li></p><p>I would add:
-<ul><li>CAPTCHA for registration</li>
-<li>2FA for high-value accounts</li>
-<li>Security headers (CSP, X-Frame-Options)</li>
-<li>Regular dependency audits with <code>pip audit</code>"</li>
-</ul>
-<strong>Q13: How would you implement real-time portfolio updates?</strong></p><p><strong>A:</strong> "Current: Polling (frontend fetches every 30s)</p><p><strong>Better approaches:</strong></p><p><li><strong>WebSockets:</strong></li>
-<pre><code># Flask-SocketIO
-@socketio.on('subscribe_portfolio')
-def handle_subscription(user_id):
-    join_room(f'user_{user_id}')
-    # Emit updates when prices change</code></pre></p><p><li><strong>Server-Sent Events (SSE):</strong></li>
-<pre><code>@app.route('/api/stream/portfolio')
-def stream_portfolio():
-    def generate():
-        while True:
-            data = get_portfolio_updates()
-            yield f'data: {json.dumps(data)}\n\n'
-            time.sleep(5)
-    return Response(generate(), mimetype='text/event-stream')</code></pre></p><p><li><strong>React Query with short staleTime</strong> for automatic refetching</li></p><p>I'd choose WebSockets for bidirectional communication and real-time price updates."</p><p><strong>Q14: Database migration strategy - rollback scenario?</strong></p><p><strong>A:</strong> "I use Alembic via Flask-Migrate:</p><p><strong>Migration workflow:</strong>
-<pre><code># Create migration
-flask db migrate -m "description"</p><p><h1>Review auto-generated migration</h1>
-<h1>Edit versions/xxxxx.py if needed</h1></p><p><h1>Apply</h1>
-flask db upgrade</p><p><h1>Rollback</h1>
-flask db downgrade -1</code></pre></p><p><strong>Best practices:</strong>
-<li>Always review auto-generated migrations</li>
-<li>Test migrations in staging first</li>
-<li>Backup database before prod migrations</li>
-<li>Keep migrations small and atomic</li>
-<li>Never modify applied migrations - create new ones</li></p><p><strong>Rollback scenario:</strong>
-<pre><code># In migration file
-def upgrade():
-    op.add_column('user', sa.Column('verified', sa.Boolean))</p><p>def downgrade():
-    op.drop_column('user', 'verified')</code></pre>"</p><p><strong>Q15: How would you test this application?</strong></p><p><strong>A:</strong> 
-<strong>Backend Testing:</strong>
-<pre><code># Unit tests
-def test_buy_stock():
-    user = User(cash=10000)
-    response = buy_stock(user, 'AAPL', 10)
-    assert user.cash &lt; 10000
-    assert response.status_code == 200</p><p><h1>Integration tests</h1>
-def test_buy_endpoint():
-    token = login('testuser', 'password')
-    response = client.post('/api/buy',
-                           headers={'Authorization': f'Bearer {token}'},
-                           json={'symbol': 'AAPL', 'shares': 10})
-    assert response.json['remaining_cash'] &gt; 0</code></pre></p><p><strong>Frontend Testing:</strong>
-<pre><code>// Jest + React Testing Library
-test('BuyDialog submits correctly', () =&gt; {
-  render(&lt;BuyDialog /&gt;);
-  fireEvent.change(screen.getByPlaceholderText('Symbol'), {
-    target: { value: 'AAPL' }
-  });
-  fireEvent.click(screen.getByText('Buy'));
-  expect(mockAxios.post).toHaveBeenCalledWith('/api/buy', ...);
-});</code></pre></p><p><strong>E2E Testing:</strong>
-<ul><li>Playwright/Cypress for user flows</li>
-<li>Test: Register → Login → Buy Stock → View Portfolio → Sell</li>
-</ul>
-<strong>Performance Testing:</strong>
-<ul><li>Locust for load testing</li>
-<li>Monitor response times under load"</li>
-</ul>
-<h3>System Design Questions</h3></p><p><strong>Q16: Design the database schema for handling 100K concurrent transactions.</strong></p><p><strong>A:</strong> 
-<strong>Optimized Schema:</strong>
-<pre><code>-- Partitioned transactions table
-CREATE TABLE transactions (
-    id BIGSERIAL,
-    user_id INTEGER NOT NULL,
-    ticker VARCHAR(10),
-    shares INTEGER,
-    price DECIMAL(10,2),
-    type VARCHAR(4),
-    created_at TIMESTAMP DEFAULT NOW()
-) PARTITION BY RANGE (created_at);</p><p>-- Monthly partitions
-CREATE TABLE transactions_2024_01 PARTITION OF transactions
-    FOR VALUES FROM ('2024-01-01') TO ('2024-02-01');</p><p>-- Indexes
-CREATE INDEX CONCURRENTLY idx_user_txn ON transactions(user_id, created_at DESC);
-CREATE INDEX idx_ticker ON transactions(ticker) WHERE created_at &gt; NOW() - INTERVAL '1 year';</p><p>-- Materialized view for portfolio
-CREATE MATERIALIZED VIEW user_portfolios AS
-SELECT 
-    user_id,
-    ticker,
-    SUM(CASE WHEN type='buy' THEN shares ELSE -shares END) as total_shares
-FROM transactions
-GROUP BY user_id, ticker;</p><p>CREATE UNIQUE INDEX ON user_portfolios(user_id, ticker);</p><p>-- Refresh strategy
-REFRESH MATERIALIZED VIEW CONCURRENTLY user_portfolios;</code></pre></p><p><strong>Additional optimizations:</strong>
-<ul><li>Write-ahead logging</li>
-<li>Connection pooling (max 100 connections)</li>
-<li>Read replicas for queries</li>
-<li>Async commit for better throughput"</li>
-</ul>
-<strong>Q17: API rate limiting implementation?</strong></p><p><strong>A:</strong> 
-<pre><code>from flask_limiter import Limiter
-from flask_limiter.util import get_remote_address</p><p>limiter = Limiter(
-    app,
-    key_func=get_remote_address,
-    storage_uri="redis://localhost:6379"
-)</p><p><h1>Apply limits</h1>
-@app.route('/api/quote')
-@limiter.limit("100 per minute")
-def get_quote():
-    ...</p><p>@app.route('/api/buy')
-@limiter.limit("10 per minute")
-@jwt_required()
-def buy_stock():
-    ...</p><p><h1>User-specific limits</h1>
-@limiter.limit("1000 per day", key_func=lambda: get_jwt_identity())</code></pre></p><p><strong>Distributed rate limiting:</strong>
-<ul><li>Use Redis for centralized counter</li>
-<li>Sliding window algorithm</li>
-<li>Return 429 with Retry-After header"</li>
-</ul>
-<strong>Q18: Monitoring and observability strategy?</strong></p><p><strong>A:</strong> 
-<strong>Logging:</strong>
-<pre><code>import logging
-from pythonjsonlogger import jsonlogger</p><p>logger = logging.getLogger()
-handler = logging.StreamHandler()
-formatter = jsonlogger.JsonFormatter()
-handler.setFormatter(formatter)
-logger.addHandler(handler)</p><p><h1>Structured logging</h1>
-logger.info('Stock purchased', extra={
-    'user_id': user_id,
-    'ticker': 'AAPL',
-    'shares': 10,
-    'price': 175.50,
-    'transaction_id': txn.id
-})</code></pre></p><p><strong>Metrics (Prometheus):</strong>
-<ul><li>Request count, latency, error rate</li>
-<li>Database connection pool utilization</li>
-<li>Active users, total trades</li>
-<li>Custom: Portfolio value distribution</li>
-</ul>
-<strong>Tracing (Jaeger):</strong>
-<ul><li>Track request flow: Frontend → API → Database</li>
-<li>Identify bottlenecks</li>
-</ul>
-<strong>Alerts:</strong>
-<ul><li>High error rate (&gt;5%)</li>
-<li>Slow queries (&gt;1s)</li>
-<li>Database connections exhausted</li>
-<li>Failed external API calls"</li>
-</ul>
----</p><p><h2>🎯 Interview Tips &amp; Strategy</h2></p><p><h3>How to Answer Technical Questions</h3></p><p><strong>1. Use the STAR Method:</strong>
-<ul><li><strong>S</strong>ituation: Context of the problem</li>
-<li><strong>T</strong>ask: What you needed to accomplish</li>
-<li><strong>A</strong>ction: What you did</li>
-<li><strong>R</strong>esult: Outcome and learnings</li>
-</ul>
-<strong>Example:</strong>
-<em>"When implementing buy/sell transactions (S), I needed to ensure data consistency (T). I used database transactions with try-catch blocks and rollback on failure (A). This prevented scenarios where a user's cash was deducted but the transaction wasn't recorded (R)."</em></p><p><strong>2. Think Out Loud:</strong>
-<ul><li>Don't go silent when thinking</li>
-<li>Verbalize your thought process</li>
-<li>Draw diagrams if needed</li>
-<li>Ask clarifying questions</li>
-</ul>
-<strong>3. Start Broad, Then Deep:</strong>
-<pre><code>Level 1: "I used JWT for authentication"
-Level 2: "JWT tokens are generated on login, stored in localStorage, and sent via Authorization header"
-Level 3: "I chose JWT because it's stateless and scalable. The token contains user_id, is signed with HS256, expires in 24h, and includes refresh token rotation for security"</code></pre></p><p><strong>4. Admit What You Don't Know:</strong>
-<ul><li>"I haven't implemented that, but here's how I would approach it..."</li>
-<li>"That's interesting, I'd research X, Y, Z to solve that"</li>
-<li>Shows honesty and problem-solving ability</li>
-</ul>
-<strong>5. Connect to Your Project:</strong>
-Always bring the conversation back to YOUR implementation:
-<ul><li>"In LiteKite, I implemented..."</li>
-<li>"When I built the portfolio feature..."</li>
-<li>"I chose to use X because..."</li>
-</ul>
-<h3>Common Question Patterns</h3></p><p><strong>"What would you do differently?"</strong>
-<ul><li>WebSocket for real-time updates</li>
-<li>Redis caching layer</li>
-<li>Implement testing (Jest, pytest)</li>
-<li>Add TypeScript to backend (FastAPI)</li>
-<li>Microservices architecture for scale</li>
-<li>CI/CD pipeline</li>
-</ul>
-<strong>"Biggest challenge?"</strong>
-<ul><li>Talk about the Indian stock API integration</li>
-<li>Real-time price updates</li>
-<li>Handling race conditions in transactions</li>
-<li>OAuth callback flow debugging</li>
-</ul>
-<strong>"How did you learn X?"</strong>
-<ul><li>Official documentation</li>
-<li>Built small prototypes first</li>
-<li>Stack Overflow for specific issues</li>
-<li>Debugging and iteration</li>
-</ul>
-<h3>Pre-Interview Checklist</h3></p><p><strong>✅ Know Your Numbers:</strong>
-<ul><li>3 database tables</li>
-<li>2 markets (US &amp; Indian)</li>
-<li>$10,000 starting cash per market</li>
-<li>JWT authentication</li>
-<li>15+ API endpoints</li>
-<li>React 18, Flask 3.x, PostgreSQL</li>
-</ul>
-<strong>✅ Rehearse These:</strong>
-<li>30-second elevator pitch</li>
-<li>Authentication flow (diagram it)</li>
-<li>Buy stock flow end-to-end</li>
-<li>Database schema</li>
-<li>Why you chose each technology</li></p><p><strong>✅ Have Stories Ready:</strong>
-<ul><li>A bug you fixed</li>
-<li>A feature you're proud of</li>
-<li>Something you learned</li>
-<li>A trade-off you made</li>
-</ul>
-<strong>✅ Test Your Project:</strong>
-<ul><li>Make sure it runs locally</li>
-<li>Have a demo ready</li>
-<li>Know where each feature is in code</li>
-<li>Can you add a simple feature live?</li>
-</ul>
-<h3>Day Before Interview</h3></p><p><li><strong>Code Review:</strong> Read through your main files</li>
-<li><strong>Run the App:</strong> Make sure everything works</li>
-<li><strong>Prepare Questions:</strong> Have 3-5 questions for them</li>
-<li><strong>Environment:</strong> Test camera, mic, internet</li>
-<li><strong>Sleep Well:</strong> Your brain needs rest</li></p><p><h3>During Interview</h3></p><p><strong>DO:</strong>
-<ul><li>✅ Make eye contact and smile</li>
-<li>✅ Ask for clarification</li>
-<li>✅ Use diagrams and examples</li>
-<li>✅ Mention trade-offs</li>
-<li>✅ Show enthusiasm for your project</li>
-</ul>
-<strong>DON'T:</strong>
-<ul><li>❌ Memorize answers (sounds robotic)</li>
-<li>❌ Badmouth technologies</li>
-<li>❌ Say "it just works" without explaining</li>
-<li>❌ Lie about what you know</li>
-<li>❌ Rush through answers</li>
-</ul>
-<h3>If You Go Blank</h3></p><p><strong>Pause Strategies:</strong>
-<li>"That's a great question, let me think for a moment..."</li>
-<li>"Could you clarify what you mean by X?"</li>
-<li>"Let me draw this out to explain better"</li>
-<li>"In my project, I encountered something similar..."</li>
-<li>Take a sip of water</li></p><p><strong>Redirect:</strong>
-<ul><li>"I'm not familiar with that specific approach, but in LiteKite I used..."</li>
-<li>"I haven't implemented X, but I understand the concept involves Y and Z"</li>
-</ul>
----</p><p><h2>📚 Quick Reference Cheat Sheet</h2></p><p><h3>Architecture</h3>
-<ul><li><strong>Pattern:</strong> Client-Server, REST API</li>
-<li><strong>Frontend:</strong> React SPA with protected routes</li>
-<li><strong>Backend:</strong> Flask REST API</li>
-<li><strong>Database:</strong> PostgreSQL with SQLAlchemy ORM</li>
-<li><strong>Auth:</strong> JWT + Google OAuth 2.0</li>
-</ul>
-<h3>Key Technologies</h3>
-| Layer | Technology | Purpose |
-|-------|-----------|---------|
-| Frontend | React + TypeScript | UI components |
-| Routing | React Router v6 | SPA navigation |
-| Styling | Tailwind + Shadcn | Responsive design |
-| Charts | Recharts | Data visualization |
-| Backend | Flask | REST API server |
-| ORM | SQLAlchemy | Database operations |
-| Auth | JWT-Extended | Token management |
-| Database | PostgreSQL | Data persistence |
-| Stock Data | yfinance | Real-time prices |
-| AI | Google Gemini | Portfolio analysis |</p><p><h3>File Structure to Know</h3>
-<pre><code>Backend:
-<ul><li>api/index.py         → Main Flask app, all endpoints</li>
-<li>api/models.py        → Database models</li>
-<li>api/helpers.py       → Utility functions (lookup, usd)</li>
-<li>api/stock.py         → Stock data fetching</li>
-<li>api/fundamentals.py  → Stock analysis data</li>
-</ul>
-Frontend:
-<ul><li>src/App.tsx          → Routes and layout</li>
-<li>src/AuthContext.tsx  → Auth state management</li>
-<li>src/components/BuyDialog.tsx → Stock purchase UI</li>
-<li>src/pages/Portfolio.tsx      → Portfolio display</li>
-<li>src/lib/url.ts       → API base URL</code></pre></li>
-</ul>
-<h3>SQL Queries You Might Discuss</h3></p><p><strong>Get Portfolio:</strong>
-<pre><code>SELECT ticker, 
-       SUM(CASE WHEN type='buy' THEN shares ELSE -shares END) as net_shares
-FROM transactions 
-WHERE user_id = ?
-GROUP BY ticker
-HAVING net_shares &gt; 0;</code></pre></p><p><strong>Transaction History:</strong>
-<pre><code>SELECT * FROM transactions
-WHERE user_id = ?
-ORDER BY time DESC
-LIMIT 50;</code></pre></p><p><strong>Total Invested:</strong>
-<pre><code>SELECT SUM(shares * price) as total
-FROM transactions
-WHERE user_id = ? AND type = 'buy';</code></pre></p><p><h3>API Flow Examples</h3></p><p><strong>Login Flow:</strong>
-<pre><code>1. POST /api/login {username, password}
-<li>Backend: validate credentials</li>
-<li>Generate JWT token</li>
-<li>Return {access_token: "eyJ..."}</li>
-<li>Frontend: store in localStorage</li>
-<li>Set axios default header</code></pre></li></p><p><strong>Buy Stock Flow:</strong>
-<pre><code>1. User enters symbol + shares
-<li>POST /api/quote {symbol} → get current price</li>
-<li>Display total cost</li>
-<li>User confirms</li>
-<li>POST /api/buy {symbol, shares} with JWT</li>
-<li>Backend: validate, update DB</li>
-<li>Return success + updated balance</li>
-<li>Frontend: refresh portfolio</code></pre></li></p><p>---</p><p><h2>🚀 Final Confidence Boosters</h2></p><p><h3>You Built This!</h3>
-<ul><li>You integrated multiple APIs</li>
-<li>You implemented authentication from scratch</li>
-<li>You designed a database schema</li>
-<li>You built a full-stack application</li>
-<li>You solved real problems (race conditions, data consistency)</li>
-</ul>
-<h3>You Know This!</h3>
-<ul><li>How data flows from frontend to backend to database</li>
-<li>How authentication works</li>
-<li>How to prevent common security issues</li>
-<li>How to structure a scalable application</li>
-</ul>
-<h3>Remember:</h3>
-&gt; <strong>Interviewers want to see:</strong>
-&gt; 1. Can you explain what you built?
-&gt; 2. Do you understand WHY you made certain choices?
-&gt; 3. Can you think through problems?
-&gt; 4. Are you honest about what you don't know?
-&gt; 5. Can you learn and improve?</p><p><strong>You've got this! Good luck! 🎯</strong></p><p>---</p><p><h2>📖 Additional Study Topics (If Asked)</h2></p><p><ul><li><strong>React Hooks:</strong> useState, useEffect, useContext, custom hooks</li>
-<li><strong>TypeScript:</strong> Type safety, interfaces, generics</li>
-<li><strong>Python Async:</strong> async/await, asyncio for concurrent requests</li>
-<li><strong>Database Indexing:</strong> B-tree, Hash indexes, when to use</li>
-<li><strong>Caching Strategies:</strong> Cache-aside, write-through, TTL</li>
-<li><strong>Docker:</strong> Containerization basics</li>
-<li><strong>Git Workflow:</strong> Branching, merging, conflict resolution</li>
-<li><strong>REST Principles:</strong> GET/POST/PUT/DELETE, status codes, idempotency</li>
-</ul>
-<h3>Resources for Deep Dives</h3>
-<ul><li>Flask documentation: flask.palletsprojects.com</li>
-<li>React docs: react.dev</li>
-<li>SQLAlchemy ORM: docs.sqlalchemy.org</li>
-<li>JWT: jwt.io</li>
-<li>System Design: ByteByteGo, Designing Data-Intensive Applications</li>
-</ul></p>
-    
-    <script>
-        // Add print keyboard shortcut hint
-        document.addEventListener('DOMContentLoaded', function() {
-            console.log('Press Ctrl+P (or Cmd+P on Mac) to print this page as PDF');
-        });
-    </script>
-</body>
-</html>

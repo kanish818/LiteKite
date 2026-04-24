@@ -8,7 +8,6 @@ This repository contains the full LiteKite codebase, separated into three main d
 
 - `frontend/`: The React (Vite) frontend application.
 - `backend/`: The Flask/Python backend server.
-- `interview_prep/`: Guides and reference materials for interview preparation related to the tech stack.
 
 ## Getting Started
 
