@@ -158,7 +158,7 @@ useEffect(() => {
         }`}
       >
         <div className={`flex flex-col justify-center my-2 mx-1 ${open ? "" : "hidden"}`}>
-          <Link to="/" className="text-xl font-bold">StockVision</Link>
+          <Link to="/" className="text-xl font-bold">LiteKite</Link>
           <div>
             <h1>Nifty50:</h1>
           </div>

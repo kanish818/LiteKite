@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import url from "@/lib/url";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import {
@@ -53,7 +54,7 @@ const AnalyzeDialog: React.FC<AnalyzeDialogProps> = ({ stock, avg_price, shares,
         ltp
       };
 
-      const response = await axios.post<{ analysis: string }>(`https://aisupport-five.vercel.app/api/analyze`, payload);
+      const response = await axios.post<{ analysis: string }>(`${url}/analyze`, payload);
       
       // Parse the analysis string into an object
       const parsedAnalysis: AnalysisData = JSON.parse(response.data.analysis);
@@ -131,7 +132,7 @@ const AnalyzeDialog: React.FC<AnalyzeDialogProps> = ({ stock, avg_price, shares,
         </ScrollArea>
 
         <DialogFooter className="flex items-center justify-between border-t pt-4 mt-4">
-          <CardDescription>Powered By Gemini</CardDescription>
+          <CardDescription>Powered By Groq</CardDescription>
         </DialogFooter>
       </DialogContent>
     </Dialog>

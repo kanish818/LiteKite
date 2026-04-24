@@ -3,22 +3,14 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../AuthContext";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardContent,
-  CardDescription,
-} from "@/components/ui/card";
 import { useToast } from "@/hooks/use-toast";
-import { Loader2, Mail } from "lucide-react";
+import { Loader2, Lock, User } from "lucide-react";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
-  const [googleloading, setGoogleLoading] = useState(false);
-  const { login, handleGoogleAuth, setAuthToken } = useAuth();
+  const { login, setAuthToken } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
   const { toast } = useToast();
@@ -40,20 +32,6 @@ export const Login = () => {
     }
   }, [location, setAuthToken, navigate, toast]);
 
-  const handleGoogleSignIn = async () => {
-    setGoogleLoading(true);
-    try {
-      await handleGoogleAuth();
-    } catch (error) {
-      setGoogleLoading(false);
-      toast({
-        title: "Error",
-        description: "Failed to initiate Google login",
-        variant: "destructive",
-      });
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -70,7 +48,7 @@ export const Login = () => {
       } else {
         toast({
           title: "Error",
-          description:"Please try again!",
+          description: "Network Error. Make sure the backend is running.",
           variant: "destructive",
         });
       }
@@ -80,52 +58,81 @@ export const Login = () => {
   };
 
   return (
-    <Card className="max-w-md flex justify-center flex-col mx-auto mt-5">
-      <CardHeader>
-        <CardTitle>Login</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <Input
-            type="text"
-            placeholder="Username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-          />
-          <Input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <Button type="submit" className="w-full">
-            {loading ? "Loading..." : "Login"}
-          </Button>
-        </form>
-        <Button
-          onClick={handleGoogleSignIn}
-          className="w-full my-2"
-          onLoad={() => setLoading(true)}
-        >
-         {googleloading ? (
-            <>
-              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Connecting to Google...
-            </>
-          ) : (
-            <>
-              <Mail className="mr-2" />
-              Login with Google
-            </>
-          )}
-        </Button>
-        <CardDescription className="text-center text-md mt-4">
-          Don't have an account?{" "}
-          <Link className="underline font-semibold" to={"/register"}>
-            Register
-          </Link>
-        </CardDescription>
-      </CardContent>
-    </Card>
+    <div className="min-h-screen bg-gradient-to-br from-[#0a0a0f] via-[#0f0f1a] to-[#0d0d16] flex items-center justify-center px-4">
+      {/* Ambient glows */}
+      <div className="fixed inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[-20%] left-[-10%] w-[500px] h-[500px] rounded-full bg-blue-600/8 blur-[120px]" />
+        <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] rounded-full bg-indigo-600/8 blur-[120px]" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-md">
+        {/* Logo */}
+        <div className="text-center mb-8">
+          <h1 className="text-3xl font-bold text-white tracking-tight">
+            <span className="text-blue-400">Lite</span>Kite
+          </h1>
+          <p className="text-gray-500 mt-2 text-sm">Welcome back. Sign in to continue.</p>
+        </div>
+
+        {/* Card */}
+        <div className="bg-white/[0.04] backdrop-blur-xl border border-white/10 rounded-2xl p-8 shadow-2xl shadow-black/50">
+          <h2 className="text-xl font-semibold text-white mb-6">Sign In</h2>
+
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="relative">
+              <User className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
+              <Input
+                type="text"
+                placeholder="Username"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                className="pl-10 bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20"
+              />
+            </div>
+            <div className="relative">
+              <Lock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-500" />
+              <Input
+                type="password"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="pl-10 bg-white/5 border-white/10 text-white placeholder:text-gray-500 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20"
+              />
+            </div>
+
+            <Button
+              type="submit"
+              className="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2.5 shadow-lg shadow-blue-900/30 transition-all"
+              disabled={loading}
+            >
+              {loading ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Signing in...
+                </>
+              ) : (
+                "Sign In"
+              )}
+            </Button>
+          </form>
+
+          <div className="mt-6 pt-5 border-t border-white/10">
+            <p className="text-center text-sm text-gray-500">
+              Don't have an account?{" "}
+              <Link
+                className="text-blue-400 hover:text-blue-300 font-medium underline-offset-4 hover:underline"
+                to="/register"
+              >
+                Create one
+              </Link>
+            </p>
+          </div>
+        </div>
+
+        <p className="text-center text-xs text-gray-600 mt-6">
+          &copy; 2026 LiteKite. All rights reserved.
+        </p>
+      </div>
+    </div>
   );
 };

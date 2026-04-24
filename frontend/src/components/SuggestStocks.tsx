@@ -1,6 +1,7 @@
 import { toast } from "@/hooks/use-toast";
 import axios from "axios";
 import {useState } from "react";
+import url from "@/lib/url";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -62,7 +63,7 @@ const SuggestStocks: React.FC<SuggestStocksProps> = ({
     setError(null);
     try {
       const response = await axios.post<{ "analysis:": string }>(
-        "https://aisupport-five.vercel.app/api/suggest-stocks",
+        `${url}/suggest-stocks`,
         { total, stocks, cash }
       );
       const parsedSuggestions: SuggestionResult = JSON.parse(response.data["analysis:"]);
@@ -96,7 +97,7 @@ const SuggestStocks: React.FC<SuggestStocksProps> = ({
         <DialogHeader>
           <DialogTitle className="text-2xl">Stock recommendations</DialogTitle>
           <DialogDescription>
-            Get a comprehensive list of stocks where you can deploy your remaining cash, curated by Gemini according to your current portfolio and risk appetite.
+            Get a comprehensive list of stocks where you can deploy your remaining cash, curated by Groq according to your current portfolio and risk appetite.
           </DialogDescription>
         </DialogHeader>
 
@@ -156,7 +157,7 @@ const SuggestStocks: React.FC<SuggestStocksProps> = ({
         </ScrollArea>
 
         <DialogFooter className="flex items-center justify-between border-t pt-4 mt-4">
-          <CardDescription>Powered By Gemini</CardDescription>
+          <CardDescription>Powered By Groq</CardDescription>
           <div className="space-x-2">
             <Button onClick={clearResults} variant="outline" disabled={loading || (!suggestion && !error)}>
               Clear Results

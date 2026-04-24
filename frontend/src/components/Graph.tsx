@@ -96,7 +96,7 @@ export const InteractiveStockChart: FC<InteractiveStockChartProps> = ({
     try {
       setIsPredicting(true);
       const response = await axios.post(
-        "https://aisupport-five.vercel.app/api/stock-prediction",
+        `${url}/stock-prediction`,
         {
           symbol: ticker,
           graph_data: stockData,
@@ -312,7 +312,7 @@ export const InteractiveStockChart: FC<InteractiveStockChartProps> = ({
           >
             {isPredicting ? "Predicting..." : "Predict"}
           </Button>
-          <p className="font-sm font-semibold">Powered By Gemini</p>
+          <p className="font-sm font-semibold">Powered By Groq</p>
         </div>
       </CardFooter>
     </Card>

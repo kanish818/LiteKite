@@ -1,6 +1,7 @@
 import { toast } from "@/hooks/use-toast";
 import axios from "axios";
 import { useState } from "react";
+import url from "@/lib/url";
 import { Button } from "./ui/button";
 import {
   Dialog,
@@ -65,7 +66,7 @@ const AnalyzePortfolioDialog: React.FC<AnalyzePortfolioProps> = ({
     setError(null);
     try {
       const response = await axios.post<{ analysis: string }>(
-        "https://aisupport-five.vercel.app/api/portfolio-analyze",
+        `${url}/portfolio-analyze`,
         { total, stocks, cash }
       );
       const parsedAnalysis: AnalysisResult = JSON.parse(response.data.analysis);
@@ -179,7 +180,7 @@ const AnalyzePortfolioDialog: React.FC<AnalyzePortfolioProps> = ({
         </ScrollArea>
 
         <DialogFooter className="flex items-center justify-between border-t pt-4 mt-4">
-          <CardDescription>Powered By Gemini</CardDescription>
+          <CardDescription>Powered By Groq</CardDescription>
         </DialogFooter>
         <DialogDescription>Beta phase</DialogDescription>
       </DialogContent>

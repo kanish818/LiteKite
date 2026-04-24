@@ -164,7 +164,7 @@ export function SidebarForUSAStocks({
           className={`flex justify-center my-2 mx-1 ${open ? "" : "hidden"}`}
         >
           <Link to="/" className="text-xl font-bold">
-            StockVision
+            LiteKite
           </Link>
         </div>
         <div

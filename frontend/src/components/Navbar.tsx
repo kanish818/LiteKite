@@ -45,7 +45,7 @@ const Navbar = () => {
   const MobileNavbar = () => (
     <div className="md:hidden">
       <div className="flex items-center justify-between px-4 py-3 border-b">
-        <Link to="/" className="text-xl font-bold">StockVision</Link>
+        <Link to="/" className="text-xl font-bold">LiteKite</Link>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600"
@@ -94,7 +94,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="text-xl font-bold">StockVision</Link>
+            <Link to="/" className="text-xl font-bold">LiteKite</Link>
           </div>
           
           <div className="flex items-center space-x-4">

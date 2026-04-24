@@ -153,7 +153,7 @@ export default function Info() {
 
       <Card className='p-5 my-5'>
         <CardDescription>All the data is provided by the Finnhub APIs</CardDescription>
-        {/* <CardDescription>* AI support by Gemini</CardDescription> */}
+        {/* <CardDescription>* AI support by Groq</CardDescription> */}
       </Card>
     </div>
   )
