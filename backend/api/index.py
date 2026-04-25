@@ -4,6 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_jwt_extended import JWTManager, jwt_required, create_access_token, get_jwt_identity
 from werkzeug.security import check_password_hash, generate_password_hash
+from werkzeug.middleware.proxy_fix import ProxyFix
 from datetime import datetime
 from dotenv import load_dotenv
 from flask_migrate import Migrate
@@ -28,6 +29,7 @@ from .indianstocks import get_indian_stock_graph,get_price_for_stock,search_indi
 load_dotenv()
 
 app = Flask(__name__)
+app.wsgi_app = ProxyFix(app.wsgi_app, x_proto=1, x_host=1)
 FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
 allowed_origins = [FRONTEND_URL, "http://localhost:5173", "http://127.0.0.1:5173"]
 CORS(app, origins="*", supports_credentials=False)
