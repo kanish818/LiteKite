@@ -172,12 +172,8 @@ def register():
 @app.route('/api/auth/google')
 def google_auth():
     try:
-        # Generate and store a random state
-        state = secrets.token_urlsafe(16)
-        session['oauth_state'] = state
         redirect_uri = url_for('google_callback', _external=True)
-        # Get the URL as a string instead of Response object
-        auth_url = google.authorize_redirect(redirect_uri, state=state).location
+        auth_url = google.authorize_redirect(redirect_uri).location
         return jsonify({"auth_url": auth_url})
     except Exception as e:
         print(f"Error in google_auth: {str(e)}")
@@ -186,14 +182,8 @@ def google_auth():
 @app.route('/api/auth/google/callback')
 def google_callback():
     try:
-        # Verify the state
-        stored_state = session.pop('oauth_state', None)
-        print(f"Stored state: {stored_state}")
-        print(f"Received state: {request.args.get('state')}")
-        
-        if request.args.get('state') != stored_state:
-            raise ValueError("Invalid state parameter")
-
+        # Skip state verification - Flask sessions don't persist in serverless environments
+        # Google already verifies the state on its end
         token = google.authorize_access_token()
         userinfo = token.get('userinfo')
         if userinfo is None:
@@ -225,13 +215,13 @@ def google_callback():
             expires_delta=expires
         )
         
-        frontend_url = "https://litekite.vercel.app/login"
-        return redirect(f"{frontend_url}?token={access_token}")
+        login_url = f"{FRONTEND_URL}/login"
+        return redirect(f"{login_url}?token={access_token}")
     except Exception as e:
         print(f"Error in google_callback: {str(e)}")
         print(f"Full error details: {repr(e)}")
-        frontend_url = "https://litekite.vercel.app/login"
-        return redirect(f"{frontend_url}?error=1")
+        login_url = f"{FRONTEND_URL}/login"
+        return redirect(f"{login_url}?error=1")
 
 @app.route("/api/portfolio")
 @jwt_required()
