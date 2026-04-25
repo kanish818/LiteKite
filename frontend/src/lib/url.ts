@@ -1,2 +1,2 @@
-const url = import.meta.env.VITE_BACKEND_URL
+const url = import.meta.env.VITE_BACKEND_URL || '/api'
 export default url
