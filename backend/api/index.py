@@ -34,8 +34,8 @@ FRONTEND_URL = os.getenv('FRONTEND_URL', 'http://localhost:5173')
 allowed_origins = [FRONTEND_URL, "http://localhost:5173", "http://127.0.0.1:5173"]
 CORS(app, origins="*", supports_credentials=False)
 DATABASE_URI = os.getenv('DATABASE_URI')
-GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
-GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+GOOGLE_CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID', '').strip()
+GOOGLE_CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET', '').strip()
 SECRET_KEY = os.getenv('SECRET_KEY')
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URI
 app.config['GOOGLE_CLIENT_ID'] = GOOGLE_CLIENT_ID
