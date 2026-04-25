@@ -128,9 +128,7 @@ def is_valid_nse_symbol(symbol: str) -> bool:
 def get_indian_stock_graph(symbol: str) -> list[StockData]:
     try:
         symbol = get_nse_symbol(symbol)
-        if not is_valid_nse_symbol(symbol):
-            raise ValueError(f"Invalid NSE symbol: {symbol}")
-
+        
         end_date = datetime.now()
         start_date = end_date - timedelta(days=100)
         
@@ -159,8 +157,6 @@ def get_indian_stock_graph(symbol: str) -> list[StockData]:
 def get_price_for_stock(symbol: str):
     try:
         symbol = get_nse_symbol(symbol)
-        if not is_valid_nse_symbol(symbol):
-            raise ValueError(f"Invalid NSE symbol: {symbol}")
 
         stock = yf.Ticker(symbol)
         latest_data = stock.history(period="1d")

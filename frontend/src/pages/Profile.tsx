@@ -104,13 +104,13 @@ const Profile = () => {
   const handleAddFunds = async () => {
     try {
       const token = localStorage.getItem("token");
-      if (addUsFunds > 10000 || addIndianFunds > 10000) {
+      if (addUsFunds > 10000 || addIndianFunds > 1000000) {
         toast({
           title : "Unauthorized",
-          description : "Add funds limit is 10000",
+          description : "Add funds limit is 10000 for US, 1000000 for Indian accounts",
           variant : "destructive"
         })
-        throw new Error("Limit breached, you can only add 10000 at once")
+        throw new Error("Limit breached")
       }
       const res = await axios.post(
         `${url}/editbalances`,
@@ -226,7 +226,7 @@ const Profile = () => {
             value={addIndianFunds}
             placeholder="Enter US Balance amount..."
             onChange={(e) => setAddIndianFunds(Number(e.target.value))}
-            max={10000}
+            max={1000000}
           />
           <Button onClick={handleAddFunds}>
             Add Funds <IndianRupee />{" "}
