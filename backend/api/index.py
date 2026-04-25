@@ -193,31 +193,46 @@ def google_callback():
 
         # Use sub as the unique identifier
         google_id = userinfo.get('sub')
-        if not google_id:
-            raise ValueError("No user ID received from Google")
+        email = userinfo.get('email')
+        if not google_id or not email:
+            raise ValueError("No user ID or email received from Google")
 
+        # First try to find user by google_id
         user = User.query.filter_by(google_id=google_id).first()
+
         if not user:
-            user = User(
-                username=userinfo['email'],
-                email=userinfo['email'],
-                google_id=google_id,
-                fullname=userinfo.get('name'),
-                nationality=None
-            )
-            db.session.add(user)
-            db.session.commit()
-        
+            # Try to find by email/username (user may have registered manually with same email)
+            user = User.query.filter(
+                (User.email == email) | (User.username == email)
+            ).first()
+
+            if user:
+                # Link the google_id to their existing account
+                user.google_id = google_id
+                db.session.commit()
+            else:
+                # Brand new user — create account
+                user = User(
+                    username=email,
+                    email=email,
+                    google_id=google_id,
+                    fullname=userinfo.get('name'),
+                    nationality=None
+                )
+                db.session.add(user)
+                db.session.commit()
+
         # Create JWT with expiration
         expires = timedelta(hours=24)
         access_token = create_access_token(
             identity=str(user.id),
             expires_delta=expires
         )
-        
+
         login_url = f"{FRONTEND_URL}/login"
         return redirect(f"{login_url}?token={access_token}")
     except Exception as e:
+        db.session.rollback()
         print(f"Error in google_callback: {str(e)}")
         print(f"Full error details: {repr(e)}")
         login_url = f"{FRONTEND_URL}/login"
